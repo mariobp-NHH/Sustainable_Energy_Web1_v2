@@ -57,6 +57,7 @@ class Moduls(db.Model):
     question_num = db.Column(db.Integer)
     question_str = db.Column(db.String(100))
     question_result = db.Column(db.Integer)
+    exercise_num = db.Column(db.Integer)
     date_exercise = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 

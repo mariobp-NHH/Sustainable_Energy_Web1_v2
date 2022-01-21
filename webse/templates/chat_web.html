@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+</br>
+<div class="container">
+  <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{ legend }}</legend>
+                <p class="card-text">
+                    Select one chat module and one chat group (for the "Home chat" and the "Informal chat", the unique chat group option is "All"):
+                </p>
+                <div class="form-group">
+                    {{ form.chat_module.label(class="form-control-label") }}
+                    {% if form.chat_module.errors %}
+                        {{ form.chat_module(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.chat_module.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.chat_module(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.chat_group.label(class="form-control-label") }}
+                    {% if form.chat_group.errors %}
+                        {{ form.chat_group(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.chat_group.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.chat_group(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            </br>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+  <article class="media content-section">
+      {% for chat in chats.items %}
+            <article class="media content-section">
+              <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + chat.author.image_file) }}">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="{{ url_for('user_chats', username=chat.author.username) }}">{{ chat.author.username }}</a>
+                  <small class="text-muted">{{ chat.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                <h4><a class="article-title" href="{{ url_for('chat', chat_id=chat.id) }}">{{ chat.title }}</a></h4>
+                <p class="text-muted">{{ chat.content }}</p>
+              </div>
+            </article>
+        {% endfor %}
+        {% if chats %}
+          {% for page_num in chats.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+              {% if chats.page == page_num %}
+                <a class="btn btn-info mb-4" href="{{ url_for('chat_web', page=page_num) }}">{{ page_num }}</a>
+              {% else %}
+                <a class="btn btn-outline-info mb-4" href="{{ url_for('chat_web', page=page_num) }}">{{ page_num }}</a>
+              {% endif %}
+            {% else %}
+              ...
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          ...
+        {% endif %}
+
+  </article>
+</div>
+{% endblock content %}

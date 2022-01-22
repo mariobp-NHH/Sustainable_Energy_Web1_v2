@@ -123,7 +123,7 @@
       /*Container questions*/
       .questions_css {
           display: flex;
-          align-items: start;
+          align-items: stretch;
           justify-content: space-between;
       }
 

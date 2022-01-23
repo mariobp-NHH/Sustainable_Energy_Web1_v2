@@ -17,7 +17,7 @@
                               <small class="text-muted">{{ chat.date_posted.strftime('%Y-%m-%d') }}</small>
                             </div>
                             <h2><a class="article-title" href="{{ url_for('chat', chat_id=chat.id) }}">{{ chat.title }}</a></h2>
-                            <p class="article-content">{{ chat.content }}</p>
+                            <p class="text-muted">{{ chat.content }}</p>
                           </div>
                         </article>
                     {% endfor %}

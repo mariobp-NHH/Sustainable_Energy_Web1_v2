@@ -590,7 +590,7 @@ def se_web_ch1():
     if form_M2_Ch1_Q1.validate_on_submit():
         Moduls.query.filter_by(author=current_user). \
             filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_('Ch1. Overview')). \
+            filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
             filter(Moduls.question_num.is_(2)).delete()
         db.session.commit()
         moduls = Moduls(question_str=form_M2_Ch1_Q1.type.data, author=current_user)
@@ -599,7 +599,7 @@ def se_web_ch1():
         else:
             moduls.question_result = 0
         moduls.title_mo = 'Sustainable Energy'
-        moduls.title_ch = 'Ch1. Overview'
+        moduls.title_ch = 'Chapter 1. Frame'
         moduls.question_num = 2
         db.session.add(moduls)
         db.session.commit()
@@ -609,7 +609,7 @@ def se_web_ch1():
     if form_M2_Ch1_Q2.validate_on_submit():
         Moduls.query.filter_by(author=current_user). \
             filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_('Ch1. Overview')). \
+            filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
             filter(Moduls.question_num.is_(3)).delete()
         db.session.commit()
         moduls = Moduls(question_str=form_M2_Ch1_Q2.type.data, author=current_user)
@@ -618,7 +618,7 @@ def se_web_ch1():
         else:
             moduls.question_result = 0
         moduls.title_mo = 'Sustainable Energy'
-        moduls.title_ch = 'Ch1. Overview'
+        moduls.title_ch = 'Chapter 1. Frame'
         moduls.question_num = 3
         db.session.add(moduls)
         db.session.commit()
@@ -693,7 +693,7 @@ def se_web_ch2():
     if form_M2_Ch2_Q2.validate_on_submit():
         Moduls.query.filter_by(author=current_user). \
             filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_('Ch2. Wind')). \
+            filter(Moduls.title_ch.is_('Ch2. Ecological Footprint and Biocapacity')). \
             filter(Moduls.question_num.is_(2)).delete()
         db.session.commit()
         moduls = Moduls(question_str=form_M2_Ch2_Q2.type.data, author=current_user)
@@ -702,7 +702,7 @@ def se_web_ch2():
         else:
             moduls.question_result = 0
         moduls.title_mo = 'Sustainable Energy'
-        moduls.title_ch = 'Ch2. Wind'
+        moduls.title_ch = 'Ch2. Ecological Footprint and Biocapacity'
         moduls.question_num = 2
         db.session.add(moduls)
         db.session.commit()
@@ -712,7 +712,7 @@ def se_web_ch2():
     if form_M2_Ch2_Q3.validate_on_submit():
         Moduls.query.filter_by(author=current_user). \
             filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_('Ch2. Wind')). \
+            filter(Moduls.title_ch.is_('Ch2. Ecological Footprint and Biocapacity')). \
             filter(Moduls.question_num.is_(3)).delete()
         db.session.commit()
         moduls = Moduls(question_str=form_M2_Ch2_Q3.type.data, author=current_user)
@@ -721,7 +721,7 @@ def se_web_ch2():
         else:
             moduls.question_result = 0
         moduls.title_mo = 'Sustainable Energy'
-        moduls.title_ch = 'Ch2. Wind'
+        moduls.title_ch = 'Ch2. Ecological Footprint and Biocapacity'
         moduls.question_num = 3
         db.session.add(moduls)
         db.session.commit()
@@ -747,68 +747,60 @@ def se_web_ch2_ex1():
                            form_question=form_question)
 
 
-#Statistics
+#### Functions to define the Statistics ###
 @app.route('/statistics', methods=['GET', 'POST'])
 @login_required
 def statistics():
-    app_statistics_form = AppStatisticsForm()
-    se_statistics_form = SEStatisticsForm()
-    if app_statistics_form.validate_on_submit():
-        app_statistics_input = app_statistics_form.type.data
-        entries_app = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.title_mo.is_('App Development')). \
-            filter(Moduls.title_ch.is_(app_statistics_input)). \
-            order_by(Moduls.question_num.asc()).all()
+    entries = Moduls.query.filter_by(author=current_user).filter(Moduls.title_mo.is_('---')).order_by(Moduls.date_exercise.desc()).all()
+    return render_template('statistics/statistics.html',entries=entries, correct=0, incorrect=0)
 
-        app_incorrect = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.question_result.is_(0)). \
-            filter(Moduls.title_mo.is_('App Development')). \
-            filter(Moduls.title_ch.is_(app_statistics_input)). \
-            order_by(Moduls.question_num.asc()).count()
+@app.route('/statistics/se_ch1', methods=['GET', 'POST'])
+@login_required
+def statistics_se_ch1():
+    entries = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
+        order_by(Moduls.question_num.asc()).all()
 
-        app_correct = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.question_result.is_(1)). \
-            filter(Moduls.title_mo.is_('App Development')). \
-            filter(Moduls.title_ch.is_(app_statistics_input)). \
-            order_by(Moduls.question_num.asc()).count()
+    incorrect = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.question_result.is_(0)). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
+        order_by(Moduls.question_num.asc()).count()
 
-        flash('Your answer has been submitted!', 'success')
-        return render_template('statistics.html', app_statistics_form=app_statistics_form,
-                               se_statistics_form=se_statistics_form, entries_app=entries_app,
-                               app_correct=app_correct, app_incorrect=app_incorrect,
-                               se_correct=0, se_incorrect=0)
-    if se_statistics_form.validate_on_submit():
-        se_statistics_input = se_statistics_form.type.data
-        entries_se = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_(se_statistics_input)). \
-            order_by(Moduls.question_num.asc()).all()
+    correct = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.question_result.is_(1)). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
+        order_by(Moduls.question_num.asc()).count()
 
-        se_incorrect = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.question_result.is_(0)). \
-            filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_(se_statistics_input)). \
-            order_by(Moduls.question_num.asc()).count()
+    flash('Your answer has been submitted!', 'success')
+    return render_template('statistics/statistics_se_ch1.html', entries=entries, correct=correct, incorrect=incorrect)
 
-        se_correct = Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.question_result.is_(1)). \
-            filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_(se_statistics_input)). \
-            order_by(Moduls.question_num.asc()).count()
+@app.route('/statistics/se_ch2', methods=['GET', 'POST'])
+@login_required
+def statistics_se_ch2():
+    entries = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Ch2. Ecological Footprint and Biocapacity')). \
+        order_by(Moduls.question_num.asc()).all()
 
-        flash('Your answer has been submitted!', 'success')
-        return render_template('statistics.html', app_statistics_form=app_statistics_form,
-                               se_statistics_form=se_statistics_form, entries_se=entries_se,
-                               app_correct=0, app_incorrect=0,
-                               se_correct=se_correct, se_incorrect=se_incorrect)
+    incorrect = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.question_result.is_(0)). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Ch2. Ecological Footprint and Biocapacity')). \
+        order_by(Moduls.question_num.asc()).count()
 
-    entries_app = Moduls.query.filter_by(author=current_user).filter(Moduls.title_mo.is_('---')).order_by(Moduls.date_exercise.desc()).all()
-    entries_se = Moduls.query.filter_by(author=current_user).filter(Moduls.title_mo.is_('---')).order_by(
-        Moduls.date_exercise.desc()).all()
-    return render_template('statistics.html', app_statistics_form=app_statistics_form, se_statistics_form=se_statistics_form,
-                           entries_app=entries_app, entries_se=entries_se,
-                               app_correct=0, app_incorrect=0,
-                               se_correct=0, se_incorrect=0)
+    correct = Moduls.query.filter_by(author=current_user). \
+        filter(Moduls.question_result.is_(1)). \
+        filter(Moduls.title_mo.is_('Sustainable Energy')). \
+        filter(Moduls.title_ch.is_('Ch2. Ecological Footprint and Biocapacity')). \
+        order_by(Moduls.question_num.asc()).count()
+
+    flash('Your answer has been submitted!', 'success')
+    return render_template('statistics/statistics_se_ch2.html', entries=entries, correct=correct, incorrect=incorrect)
+
+#### End functions to define the Statistics ###
 
 
 

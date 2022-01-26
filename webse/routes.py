@@ -2,7 +2,7 @@ import os
 import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
-from webse import app, db, bcrypt
+from webse import app, db, bcrypt, testdf, DBVAR
 from webse.forms import RegistrationForm, LoginForm, UpdateAccountForm, ChatFormUpdate, AnnouncementForm
 from webse.forms import ModulsForm_m1_ch2_q1, ModulsForm_m1_ch2_q2, ModulsForm_m1_ch2_q3, ModulsForm_m1_ch2_q4, ModulsForm_m1_ch2_q5
 from webse.forms import ModulsForm_m1_ch1_q1, ModulsForm_m1_ch1_q2, ModulsForm_m1_ch1_q3
@@ -668,6 +668,7 @@ def se_web_ch1_ex1_questionnaire():
     form_m2_ch1_e1 = ModulsForm_m2_ch1_e1()
 
     if form_m2_ch1_e1.validate_on_submit():
+	test_moduls=test_df(moduls,DBVAR)
         Moduls.query.filter_by(author=current_user). \
             filter(Moduls.title_mo.is_('Sustainable Energy')). \
             filter(Moduls.title_ch.is_('Chapter 1. Frame')). \
@@ -1179,13 +1180,13 @@ def se_web_ch2_ex3():
 @login_required
 def se_web_ch2_ex3_questionnaire():
     form_m2_ch2_e3 = ModulsForm_m2_ch2_e3()
-
     if form_m2_ch2_e3.validate_on_submit():
-        Moduls.query.filter_by(author=current_user). \
-            filter(Moduls.title_mo.is_('Sustainable Energy')). \
-            filter(Moduls.title_ch.is_('Chapter 2. Ecological Footprint and Biocapacity')). \
-            filter(Moduls.question_num.is_(11)).delete()
-        db.session.commit()
+	if testdf(moduls,DBVAR).test_bin:
+		Moduls.query.filter_by(author=current_user). \
+		    filter(Moduls.title_mo.is_('Sustainable Energy')). \
+		    filter(Moduls.title_ch.is_('Chapter 2. Ecological Footprint and Biocapacity')). \
+		    filter(Moduls.question_num.is_(11)).delete()
+		db.session.commit()
         moduls = Moduls(question_str=form_m2_ch2_e3.type.data, author=current_user)
         if moduls.question_str == 'Land to capture carbon emissions':
             moduls.question_option = 1

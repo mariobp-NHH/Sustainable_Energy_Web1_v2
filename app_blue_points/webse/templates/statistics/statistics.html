@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="select_statistics_css">
+                <h3 style="justify-content:center;">Statistics</h3>
+                <p>Select the exercise to visualize your statistics:
+                </p>
+                <div class="container_buttons_statistics_css">
+                    <div class="btn">
+                         <a href="{{ url_for('statistics.statistics_se_ch1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">SE, Ch1</a>
+                    </div>
+                    <div class="btn">
+                         <a href="{{ url_for('statistics.statistics_se_ch2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">SE, Ch2</a
+                    </div>
+                    <div class="btn">
+                         <a href="{{ url_for('statistics.statistics_se_ch3') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">SE, Ch3</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="statistics_css">
+                <div class="box">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">User</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Module</th>
+                                <th scope="col">Chapter</th>
+                                <th scope="col">Question Number</th>
+                                <th scope="col">Result</th>
+                                <th scope="col">Link Exercise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entry in entries %}
+                                <tr>
+                                    <th scope="row">{{ current_user.username }}</th>
+                                    <td>{{ entry.date_exercise.strftime("%m-%d-%Y") }}</td>
+                                    <td>{{ entry.title_mo }}</td>
+                                    <td>{{ entry.title_ch }}</td>
+                                    <td>{{ entry.question_num }}</td>
+                                    <td>{{ entry.question_result }}</td>
+                                    <td><a href="{{ url_for('home.home_main') }}" class="btn btn-outline-info btn-sm">Link</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box">
+                    <canvas id="correct_vs_incorrect"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% block javascript %}
+<script>
+
+    Chart.scaleService.updateScaleDefaults('linear', {
+            ticks: {
+                min: 0
+            }
+    });
+
+
+    let correct_vs_incorrect_chart = new Chart(correct_vs_incorrect, {
+            type: 'pie',
+            data: {
+            labels: ['correct', 'incorrect'],
+                datasets: [{
+                    label: "Correct Vs Incorrect",
+                    data: [{{app_correct}}, {{app_incorrect}}],
+                    backgroundColor: ['#5DA5DA ', '#FAA43A', '#60BD68',
+                        '#B276B2', '#E16851', '#FB8267'],
+
+                    borderWidth: 1,
+                    hoverBorderColor: "black",
+                    hoverBorderWidth: 2,
+                    hoverBackgroundColor: 'rgba(154, 245, 140)',
+                    pointHoverRadius: 5
+                }],
+            },
+            options: {
+                    title: {
+                        display: true,
+                            text: "Your statistics",
+                                fontSize: 20,
+                    },
+                    legend: {
+                        position: "right",
+                            labels: {
+                            fontColor: "gray"
+                        },
+                        display: true,
+                    },
+
+                    elements: {
+                        hitRadius: 3,
+                    }
+            }
+        })
+
+
+</script>
+{% endblock%}
+{% endblock content %}

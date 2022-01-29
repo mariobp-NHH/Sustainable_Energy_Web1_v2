@@ -1,0 +1,1032 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!-- Header -->
+    <section>
+        <header class="header_css", style="background-color=#f2d95c">
+            <div class="container">
+                <div>
+                    <h1> <span class="text-warning"> Chapter 3. Human Development for the Anthropocene </span></h1>
+                    <p class="mb-1">
+                        The first Human Development Index (HDI) report, published 30 years ago, presented the concept and measurement of
+                        <strong>human development</strong>. Since then, the connection between the Gross domestic product (GDP)
+                        and the HDI has evolved, and proposals have been made to adjust or change human development metrics,
+                        including to <strong>account for sustainability</strong>.
+                        </br>
+                        </br>
+                        In this chapter, we look at the new reality underpinning proposals for the Anthropocene and what that means for human
+                        development. We propose arguments for reimagining the human development journey as one in which people are embedded
+                        in the <strong>biosphere</strong>. We also explores <strong>new metrics</strong> for measuring human development taking into account
+                        our impact in the planet.
+                    </p>
+                    </br>
+                    <div class="container_buttons_links_header">
+                       <div class="btn">
+                           <a href="https://energyio.org/materialch3.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Material</a>
+                       </div>
+                       <div class="btn">
+                            <a href="https://energyio.org/presentationch3a.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Presentation (part 1)</a>
+                       </div>
+                        <div class="btn">
+                            <a href="https://energyio.org/presentationch3b.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Presentation (part 2)</a>
+                       </div>
+                    </div>
+                    </br>
+
+                    <div class="list-group", style="padding: 15px 0px;">
+                      <a href="#introduction" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Introduction</h5>
+                        </div>
+                        <p class="mb-1">
+                            What do you know about the Anthropocene Epoch? Do you know when does it begin? Do you know which are its main characteristics?
+                            Do you which are the implications of introducing carbon emissins and footprint in the methodology to work out the
+                            Human Development Index?
+                        </p>
+
+                      </a>
+                       <a href="#frame" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Defining and framing the Anthropocene</h5>
+                        </div>
+                        <p class="mb-1">
+                            We define and frame the Antropocene analyzing it from different angels. We provide a scientific discussion of Anthropocene,
+                            and we study the implications of the current notions of government, power and culture.
+                        </p>
+                      </a>
+                      <a href="#socieconomic" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Socioeconomic implications of the Anthropocene</h5>
+                        </div>
+                        <p class="mb-1">
+                            We study the implications that the Antrophocene has on our way of framing the economic system and its relation with nature.
+                        </p>
+                      </a>
+                      <a href="#methodology" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Towards a new generation of human development metrics for the Anthropocene</h5>
+                        </div>
+                        <p class="mb-1">
+                            Human development is dynamic. So the way we measure it must be, too. Over the years, new dashboards and indices have been introduced.
+                            How do we measure human development in the Anthropocene? We study the methodology to work out the Planetary pressures adjusted Human Development Index.
+                        </p>
+                      </a>
+                      <a href="#analysis" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Human development progress based on the Planetary pressures–adjusted Human Development Index: A new lens</h5>
+                        </div>
+                        <p class="mb-1">
+                            We study the evolution of the Planetary pressures adjusted Human Development Index and its relation with the Humand Development Index.
+                        </p>
+                      </a>
+                   </div>
+
+
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/ch3_icon.svg')}}"
+                        alt=""/>
+            </div>
+        </header>
+    </section>
+
+<!--introduction-->
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+
+        <div class="container">
+            <div class="section_intro_css">
+                <div class="box">
+
+                </div>
+                <div class="box">
+                <h2 style="justify-content:center;">Introduction</h2>
+                <p>
+                    What do you know about the Anthropocene Epoch?
+                    </br>
+                    </br>
+                    Do you know when does it begin?
+                    </br>
+                    </br>
+                    Do you know which are its main characteristics?
+                    </br>
+                    </br>
+                    Do you which are the implications of introducing carbon emissions and footprint in the methodology to work out the
+                            Human Development Index?
+                </p>
+                <div class="container_buttons_links_section_intro">
+                   <div class="btn">
+                       <a href="{{ url_for('se_module.se_web_ch3_ex1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Exercise 1</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('se_module.se_web_ch3_ex2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Exercise 2</a>
+                   </div>
+                </div>
+                </div>
+                <div class="box">
+
+                </div>
+            </div>
+
+
+        <!--External link-->
+            <div class="external_links_css">
+                <p>
+                    The <strong>Human Development Report</strong> can be downloaded in the next link:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="http://www.hdr.undp.org/en" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">United Nations Development Program</a>
+                   </div>
+                </div>
+                <p>
+                    To have access to the Human Development Index (HDI) <strong>data</strong> for every country visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="http://www.hdr.undp.org/en/indicators/137506" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">United Nations Development Program, Human Development Index (HDI)</a>
+                   </div>
+                </div>
+                <p>
+                    To have access to the <strong>methodology</strong> to work out the HDI visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="http://hdr.undp.org/sites/default/files/hdr2018_technical_notes.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Human Development Indices and Indicators: 2018 statistical update</a>
+                   </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!--Section 1-->
+    <section id="frame" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#6c757d;">
+        <div class="container">
+
+            <h2>Renewing human development for the Anthropocene</h2>
+
+            <p>
+                The <strong>Anthropocene</strong>: the age of humans. For the first time in our history the most serious and immediate,
+                even existential, risks are human made and unfolding at planetary scale. This section argues that this new reality
+                calls for reimagining the human development journey and leveraging the human development approach to support transformational
+                social changes to ease pressures on the planet. We study the evolution of the Human Development Index during
+                the last thirty years, and how to frame it in the context of the Anthropocene.
+            </p>
+
+            <!--External link-->
+            <div class="external_links_css">
+                <p><strong>The Anthropocene</strong> is a proposed geological epoch dating from the commencement of significant human impact on
+                    Earth's geology and ecosystems, including, but not limited to, anthropogenic climate change.
+                    </br>
+                    </br>
+                    As of July 2020, neither the International Commission on Stratigraphy (ICS) nor the International Union of
+                    Geological Sciences (IUGS) has officially approved the term as a recognised subdivision of geologic time,
+                    although the Anthropocene Working Group (AWG) of the Subcommission on Quaternary Stratigraphy (SQS) of
+                    the ICS voted in April 2016 to proceed towards a formal golden spike (GSSP) proposal to define the Anthropocene
+                    epoch in the geologic time scale and presented the recommendation to the International Geological Congress in August 2016.
+                    In May 2019, the AWG voted in favour of submitting a formal proposal to the ICS by 2021, locating potential stratigraphic markers
+                    to the mid-twentieth century of the common era. This time period coincides with the start of the Great Acceleration,
+                    a post-WWII time period during which socioeconomic and Earth system trends increase at a dramatic rate, and the Atomic Age.
+                    </br>
+                    </br>
+                    Various start dates for the Anthropocene have been proposed, ranging from the beginning of the Agricultural Revolution
+                    12,000–15,000 years ago, to as recent as the 1960s. The ratification process is still ongoing, and thus a date remains
+                    to be decided definitively, but the peak in radionuclides fallout consequential to atomic bomb testing during the 1950s has
+                    been more favoured than others, locating a possible beginning of the Anthropocene to the detonation of the first atomic bomb in
+                    1945, or the Partial Nuclear Test Ban Treaty in 1963.
+                    </br>
+                    </br>
+                    For more information about the Anthropocene visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://en.wikipedia.org/wiki/Anthropocene" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">The Anthropocene (wikipedia)</a>
+                   </div>
+                </div>
+                <p>
+                    For the <strong>documentary</strong>, the <strong>book</strong>, the <strong>art project</strong> "The Anthropocene" visit:
+			    </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://theanthropocene.org/" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">The Anthropocene project</a>
+                   </div>
+                </div>
+                <p>
+                    Two more documentaries that explains The Anthropocene::
+			    </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.youtube.com/watch?v=ZZ845voIiOE" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">The Anthropocene: Has earth shifted out of its Holocene state?</a>
+                   </div>
+                   <div class="btn">
+                       <a href="https://www.youtube.com/watch?v=AW138ZTKioM" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">The Anthropocene: The age of mankind</a>
+                   </div>
+                </div>
+            </div>
+
+            <h3>Enter the Anthropo</h3>
+
+            <p>
+                <i>“The world is a complex, nonlinear system, in which the living and non-living components are tightly coupled
+                    with important tipping points.” Timothy M. Lenton (Lenton, 2019)</i>
+                </br>
+                </br>
+                The story of the planet over time is told in the Geological Time Scale. It records distinct periods in the Earth’s history
+                over timescales spanning thousands to millions of years, differentiated by characteristics ranging from climate to the
+                emergence of life and stages in its evolution. Earth system scientists introduced the term Anthropocene at the turn of
+                the 21st century. They confronted a range of observations of recent changes to the planet that contrasted with the palaeoenvironmental
+                record of the Holocene (which is estimated to have started about 11,700 years ago) and indicated that the planet was
+                operating in a no analogue state—that is, without precedent in the history of the planet.
+                </br>
+                </br>
+                The Anthropocene is not yet formally established as a new geological epoch, but several geologists and Earth system scientists
+                propose dating its beginning to the mid-20th century with the growth in new anthropogenic materials as part of the evidence be hind
+                their proposal. That would correspond to the Great Acceleration of human pressures on the planet that have the potential to leave a
+                geological imprint (Figure: Beginning of the Anthropocene).
+                </br>
+                </br>
+                Drawing on interdisciplinary evidence and analysis, Earth systems science, geology and ecology characterize the Anthropocene from distinct perspectives
+                (Figure: Perspectives from the natural sciences on the Anthropocene). Each brings something different, showing that considering diverse perspectives and approaches reveals the complexity and reach of the concept.
+            </p>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_great_aceleration.svg')}}"
+                        alt=""/>
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_table.svg')}}"
+                        alt=""/>
+            </div>
+
+            <h3>Understanding geological and ecological change</h3>
+
+            <p>
+                <strong>To specify the Anthropocene as a new geological epoch, geologists must identify a contemporary human-induced change that is significant and
+                detectable over the timescales of Earth’s history</strong>. Mining, landfills, construction and urbanization have resulted in the greatest expansion
+                of new minerals that do not exist in the natural world as rocks (in the geological sense of having the potential for long-term persistence).
+                Pure elemental aluminium is one of these materials, and as much as 98 percent of the aluminium on Earth has been produced since 1950. Another
+                is plastics, whose current annual production equals the global human biomass. The disruptions of the global biogeochemical cycles of carbon and
+                nitrogen also leave detectable signals visible in ice cores, reflecting rapid increases in the concentrations of carbon dioxide and methane.
+                A unique and globally dispersed geological signature corresponds to the radioactive fallout from <strong>atmospheric nuclear weapons</strong>
+                tested in the mid-20th century.
+                </br>
+                </br>
+                Geologists also consider <strong>changes in flora and fauna</strong>, both extinctions and the mixing of species across previously
+                isolated continents and islands. Changes in periods in the geological timescale are often linked to sudden changes in the fossil record.
+                While difficult to use as a marker for the Anthropocene with the precision of radionuclides, the magnitude and scale of the changes by humans
+                to life on Earth may be the most enduring and obvious over the long term.
+                </br>
+                </br>
+                While Earth system science emphasizes the role of the biosphere on planetary functions and geologists look for markers,
+                <strong>ecologists and sustainability scientists</strong> provide additional insights on human pressures by considering other
+                fundamental changes to the diversity of life on the planet. <strong>The Anthropocene biosphere corresponds to a third and
+                fundamentally new stage in the evolution of life on Earth</strong>. The first was dominated by simple single-cell microbial organisms
+                —from approximately 3.5 billion to 650 million years ago. In the second stage complex multicellular life emerged,
+                becoming widespread and diverse after the Cambrian explosion 540 million years ago. <strong>Four characteristics make the
+                Anthropocene biosphere unlike anything that has ever existed on the planet</strong>:
+                <ol>
+                    <li>Homogenization of flora and fauna through deliberate or accidental transfer of species across the globe.</li>
+                    <li>One species (humans) consuming 25–40 percent of land net primary productivity (that is, the biomass and energy made available by plants to all life on Earth).</li>
+                    <li>Human-directed evolution of plants and animals, marginalizing natural biomass—something unprecedented in the last 2.4 billion years.</li>
+                    <li>Increasing impact of new technologies as the biosphere interacts with the technosphere</li>
+                </ol>
+            </p>
+
+            <h3>Bringing the Anthro into the Anthropocene</h3>
+
+            <p>
+                Along with the physical evidence this added dimension of the Anthropocene is essential to framing a new human development narrative.
+                It places people’s interactions with nature in historical, social and economic contexts, informed by insights from the natural sciences.
+                This is reflected in new fields such as the climate-economy literature and in the resurgence of interest in environmental history.
+                </br>
+                </br>
+                Historical analysis places the current moment of the Anthropocene in perspective but also shows how much of human history has been influenced by
+                occurrences in the natural world. In the words of historian Kristina Sessa, “The idea that objects, animals, and other non-human
+                entities (volcanoes, oak trees and solar radiation, for instance) shape the development of human affairs, that they possess historical
+                agency in some form, has forced scholars to<strong> rethink</strong> some of their basic assumptions about <strong>government</strong>, <strong>power</strong>,
+                and <strong>culture</strong>.” (Sessa, 2019)
+                </br>
+                </br>
+                Thus, many argue that rather than looking at the Anthropocene as a precisely dated geological period, it would be better to consider it a
+                process, or a continuous Holocene/Anthropocene, in order to understand the long (and ongoing) transition of the dialectical
+                relationship between cultural, political and economic systems and the natural world. Others reject the notion altogether, criticizing
+                a narrative that lumps humanity together without attending to either existing inequalities or historical asymmetries in power and
+                overexploitation of resources. One common line of criticism is that the notion of the Anthropocene, especially the more science-based formulations
+                such as planetary boundaries, do not strike at the heart of the problem, which is seen as capitalist modes of production as well as
+                longstanding historical legacies of colonization. Although Edward Barbier documents that the environmental record of centrally
+                planned and collectivized economies has been no better than that of capitalist ones.
+                </br>
+                </br>
+                Some of these differences in perspective reflect differences between the social sciences and the humanities, on the one hand, and the natural sciences,
+                on the other. The humanities see society and the economy as complex systems, with nature at best a contextual backdrop or something that
+                can be analytically separated from societies, even if they are physically interdependent. The natural sciences take the reverse perspective,
+                with natural systems as interdependent and complex and human agency described in aggregate terms as causing generalized impacts or disturbances.
+                Others oppose conceptualizing the Anthropocene as a process because they view the concept’s power as signifying a rupture with the past,
+                thus indicating a contemporary state of the world that urgently needs fundamental changes at the risk of catastrophic consequences for nature.
+                </br>
+                </br>
+                <strong>Where does this leave us?</strong> With the <strong>notion that the Anthropocene is something novel in two ways</strong>.
+            </p>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <p class="text-right">
+                          The Anthropocene is an encapsulation of the concept that modern human activity is large relative to planetary processes,
+                          and therefore that human social, economic, and political decisions have become entangled in a web of planetary feedbacks.
+                          This global planetary entanglement is something new in human history and Earth history.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <p class="text-right">
+                          The Anthropocene is a catalyst for systematic thinking about the interdependence of people and nature, including the
+                          Earth system. It is informed by a diversity of disciplines, going beyond linear and simplified narratives of progress,
+                          and invites framing the options that face us today as more than a choice between impending catastrophe or an easy
+                          decoupling of economic activity from planetary pressures.
+                      </p>
+                    </div>
+                  </li>
+                </ol>
+            </br>
+            <p>
+                One implication of this understanding of the relationship between people and nature is the recent reframing of the conceptual approach of ecosystems as
+                providers of services to acknowledge nature’s contributions to people. This reframing also presents anthropogenic drivers of changes in
+                nature as being embedded in institutions and governance systems. It recognizes the intrinsic value of preserving nature.
+            </p>
+
+            <h3>Questions:</h3>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q3.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 1</legend>
+                            <p class="card-text">The International Commission on Stratigraphy (ICS) and the International Union of Geological Sciences (IUGS)
+                                date the begining of the Antrophocene
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q1.type.errors %}
+                                    {{ form_m2_ch3_q1.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q1.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q1.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q1.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q3.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 2</legend>
+                            <p class="card-text">There are four characteristics make the Anthropocene biosphere unlike anything that has ever existed on the planet.
+                                Which of the next options is not one of those characteristics
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q2.type.errors %}
+                                    {{ form_m2_ch3_q2.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q2.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q2.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q2.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q3.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 3</legend>
+                            <p class="card-text">According with the historian Kristina Sessa, nature, animals, and other non-human entities (volcanoes, oak trees and solar
+                                radiation, for instance)
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q3.type.errors %}
+                                    {{ form_m2_ch3_q3.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q3.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q3.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q3.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!--Section 2-->
+    <section id="socioeconomic" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#007bff;">
+        <div class="container">
+            <h2>Socioeconomic implications of the Anthropocene</h2>
+
+            <p>
+                We study the implications that the Antrophocene has on our way of framing the economic system and its relation with nature.
+            </p>
+
+            <h3>Confronting a new reality: People versus trees?</h3>
+
+            <p>
+                <strong>Our dependence on nature is not in question</strong>. Amartya Sen put it bluntly: “It is not so much that humanity
+                is trying to sustain the natural world, but rather that humanity is trying to sustain itself. It is
+                us that will have to ‘go’ unless we can put the world around us in reasonable order. The precariousness of nature is our peril,
+                our fragility.” But there are <strong>two new elements to consider</strong>.
+            </p>
+
+            <ol>
+                <li>First, the notion of the Anthropocene has forced a <strong>reframing of thinking</strong> from standalone environmental and sustainability
+                    issues, such as climate change, to the recognition of a set of interdependent challenges resulting from underlying processes of
+                    planetary change driven by human pressures.
+	                </br>
+                    </br>
+                    As Sharachchandra Lele put it, we need to move beyond a “narrowed framing of the problem: <strong>one value</strong> (sustaining future generations),
+                    <strong>one problem</strong> (climate change), <strong>one goal</strong> (reduce carbon emissions) and <strong>one solution</strong> (renewables).”
+                    And that calls for a full understanding of the pressures we are putting on the planet and of our interdependence with nature.</li>
+                </br>
+                <li>Second, the notion of the Anthropocene emerges thanks to remarkable advances in <strong>Earth system and sustainability sciences</strong>.
+                    In addition to documenting and explaining the impacts of human activities, these new fields are stimulating interdisciplinary
+                    work, encompassing natural and social sciences and the humanities, providing insights into how to mitigate those impacts
+                    while improving people’s lives.</li>
+            </ol>
+
+            <p>
+                A key insight emerging from this vast and rapidly growing body of work is that <strong>social and natural systems are best seen not
+                only as interacting and interdependent but also as embedded in each other</strong>. Moving beyond the notion of sustainable development
+                as separable human development targets constrained by environmental or natural resource limits, to an inseparable socio-ecological systems
+                perspective on sustainable development, offers a fresh perspective on sustainable development. It further offers a novel and expanded opportunity
+                space from which to address the challenges of the Anthropocene.
+            </p>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        Reframing the human development journey in the Anthropocene has the potential to break this cycle. <strong>What does this mean for human development?</strong>
+                    </p>
+                    <ol class="list-group list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <p class="text-right">
+                      First, it presents a challenge as to how to imagine and pursue human development. Addressing social imbalances,
+                      the hemisphere on the right in figure (Planetary and social imbalances reinforce each other), has always been at the core of the human development
+                      journey. But until now the other hemisphere, planetary imbalances, has not been systematically brought into the human development journey.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <p class="text-right">
+                      Second, the human development approach has not yet been fully leveraged to inform how to address the challenges in the hemisphere on the
+                      left in figure (Planetary and social imbalances reinforce each other). It can offer fresh perspectives on making expanded capabilities and human agency central to easing pressures
+                      on the planet.
+                  </p>
+                </div>
+              </li>
+            </ol>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_imbalances.svg')}}"
+                        alt=""/>
+            </div>
+
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_environment_society.svg')}}"
+                        alt=""/>
+                <div>
+                    <p>
+                        <strong>Human societies are embedded in the biosphere and depend on it</strong>. But by extracting from it for economic activities that shape consumption
+                        and production patterns, they have also been depleting it. Much of this happens in the background and seems invisible to social and
+                        individual choices, similar to forgetting our dependence on the air we breathe. To make the interactions between social and ecological
+                        systems more visible, it is useful to look at material and energy flows in our societies and their impact on planetary processes (figure
+                        Human societies are embedded in the biosphere)
+                    </p>
+                </div>
+            </div>
+
+            <h3>Beyond needs, beyond sustaining</h3>
+
+            <p>
+                The Brundtland approach to defining <strong>sustainable development</strong> as “development that meets the needs of the present without compromising the
+                ability of future generations to meet their own needs” was a watershed moment (WCED, 1987). It brought together the ethical imperative of
+                fulfilling the basic subsistence requirements of people today—putting poverty eradication squarely at the centre of the concept—with an obligation
+                to our descendants rooted in <strong>intergenerational justice</strong>. It put people at the core, instead of defining what needed to be sustained
+                for consumption or production. And rather than asking for the preservation of a pristine state of nature, it emphasized the ability of each
+                generation to use resources, allowing for some fungibility across resources.
+                </br>
+                </br>
+                Where to go <strong>beyond needs</strong>? What can we expand, beyond focusing on sustaining? How to account for persistent inequalities that
+                feeds social imbalances? The human development approach offers a path to address these questions.
+                </br>
+                </br>
+                Human development takes us beyond notions of sustainability based on needs fulfilment and away from notions based on instrumental objectives such
+                as consumption or economic activity (measured by growth in GDP, for instance).
+                </br>
+                </br>
+                A focus on <strong>needs</strong> may lead to prioritizing social or economic floors, providing a minimum foundation to be shared by everyone, but it does not fully account for inequalities, and it downplays the potential of
+                people as agents.
+                </br>
+                </br>
+                There may not be a clear blueprint of what human development is and will be in the decades to come. Human development is permanently under construction,
+                and the approach is open to new and emerging challenges and opportunities. This section has attempted to sketch a vision of the <strong>human development
+                journey in the Anthropocene</strong> in order to navigate towards a better planet for people and the rest of life.
+            </p>
+
+            <!--External link-->
+            <div class="external_links_css">
+                <p>
+                    <strong>Brundtland Commission.</strong> Formerly known as the<strong> World Commission on Environment and Development (WCED)</strong>, the mission of the Brundtland
+                    Commission is to unite countries to pursue <strong>sustainable development</strong> together. The Chairperson of the Commission, Gro Harlem Brundtland,
+                    was appointed by United Nations Secretary-General Javier Pérez de Cuéllar in December 1983. At the time, the UN General Assembly realized that
+                    there was a heavy deterioration of the human environment and natural resources. To rally countries to work and pursue sustainable development
+                    together, the UN decided to establish the Brundtland Commission. Gro Harlem Brundtland was the former Prime Minister of Norway and was chosen due
+                    to her strong background in the sciences and public health. The Brundtland Commission officially dissolved in December 1987 after releasing Our Common
+                    Future, also known as the Brundtland Report, in October 1987.
+
+			        The Report of the World Commission on Environment and Development: Our Common Future can be downloaded from the United Nations webpage
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://sustainabledevelopment.un.org/content/documents/5987our-common-future.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Our Common Future Report</a>
+                   </div>
+                </div>
+                <p>
+                    For more information about the Brudtland Commission visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://en.wikipedia.org/wiki/Brundtland_Commission" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Brundtland Commission (wikipedia)</a>
+                   </div>
+                </div>
+            </div>
+
+            <h3>Learning from Earth system science: Something new under the sun</h3>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        Over the past 2.6 million years the planet’s temperature has oscillated sharply, leading to alternating warmer and colder periods. But the
+                        Holocene has been both warmer and more stable in temperature. The climate system has also been more stable,
+                        despite massive hydrological variability that has had radical implications at the regional scale. For instance,
+                        the Sahara has not always been the dry desert we see today, and the Amazon had to confront severe droughts earlier in the Holocene.
+                        In fact, an important characteristic of the climate system during the Holocene is the tight link between the whole web of life on
+                        the planet and in the atmosphere, regulating the carbon cycle. For instance, about a fifth of annual average precipitation
+                        falling on land is linked to plant-regulated water cycles, with many places now receiving half the precipitation from this type
+                        of cycle that they received before.
+                        </br>
+                        </br>
+                        A prominent framework to summarize how changes in the Earth system and the biosphere underpin human prosperity in
+                        fundamental ways is the<strong> planetary boundaries approach</strong> (Figure: Planetary boundaries).
+                        In 2009 Johan Rockström and colleagues identified what they denoted a <strong>safe operating space for humanity</strong>.
+                        This space is defined by several Earth system boundaries that, if transgressed, could undermine life-supporting conditions
+                        on our planet. This notion, refined over the years, remains one of the most influential framings for the challenges of the
+                        Anthropocene. Though the framework was designed explicitly for the <strong>global level</strong> only, there have been attempts
+                        to apply it at <strong>lower scales</strong>, even though that is neither encouraged nor supported by the original proponents.
+                    </p>
+
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_planet_boundaires.svg')}}"
+                        alt=""/>
+            </div>
+
+            <!--External link-->
+            <div class="external_links_css">
+                <p>
+                    <u>Planetary boundaries.</u>
+                    </br>
+                    </br>
+                    <strong>Planetary boundaries</strong> is a concept involving Earth system processes that contain environmental boundaries.
+                    It was proposed in 2009 by a group of Earth system and environmental scientists, led by Johan Rockström from the Stockholm
+                    Resilience Centre and Will Steffen from the Australian National University. The group wanted to define a "safe operating
+                    space for humanity" for the international community, including governments at all levels, international organizations,
+                    civil society, the scientific community and the private sector, as a precondition for sustainable development. The framework
+                    is based on scientific evidence that human actions since the Industrial Revolution have become the main driver of global environmental
+                    change.
+                    </br>
+                    </br>
+			        According to the paradigm, "transgressing one or more planetary boundaries may be deleterious or even catastrophic due to
+                    the risk of crossing thresholds that will trigger non-linear, abrupt environmental change within continental-scale to
+                    planetary-scale systems." The Earth system process boundaries mark the safe zone for the planet to the extent that they
+                    are not crossed. As of 2009, two boundaries have already been crossed, while others are in imminent danger of being crossed.
+
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://en.wikipedia.org/wiki/Planetary_boundaries" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Planetary boundaries (wikipedia)</a>
+                   </div>
+                </div>
+            </div>
+
+            <!--External link-->
+            <div class="external_links_css">
+                <p>
+                    <u>Doughnut (economic model).</u>
+                    </br>
+                    </br>
+			        The Doughnut, or Doughnut economics, is a visual framework for sustainable development – shaped like a doughnut or lifebelt –
+                    combining the concept of planetary boundaries with the complementary concept of social boundaries. The name derives from the
+                    shape of the diagram, i.e. a disc with a hole in the middle. The centre hole of the model depicts the proportion of people that
+                    lack access to life's essentials (healthcare, education, equity and so on) while the crust represents the ecological ceilings (planetary boundaries)
+                    that life depends on and must not be overshot. The diagram was developed by Oxford economist Kate Raworth in the Oxfam paper
+                    A Safe and Just Space for Humanity and elaborated upon in her book Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist.
+                    </br>
+                    </br>
+                    For more information about <strong>Doughnut (economic model)</strong> visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.kateraworth.com/" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">https://www.kateraworth.com/</a>
+                   </div>
+                   <div class="btn">
+                        <a href="https://en.wikipedia.org/wiki/Doughnut_(economic_model)" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Doughnut (economic model) (wikipedia)</a>
+                   </div>
+                </div>
+                <p>
+                    For a video about <strong>Doughnut (economic model)</strong> visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.ted.com/talks/kate_raworth_a_healthy_economy_should_be_designed_to_thrive_not_grow" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Kate Raworth (TED talk)</a>
+                   </div>
+                </div>
+            </div>
+
+            <h3>Questions:</h3>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q4.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 4</legend>
+                            <p class="card-text">
+                                According to the planetary boundaries approach, which of the next planetary safe operating space
+                                boundaries have been passed by the humanity?
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q4.type.errors %}
+                                    {{ form_m2_ch3_q4.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q4.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q4.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q4.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q5.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 5</legend>
+                            <p class="card-text">According with the United Nations Development Program, the planetary and
+                                the social imbalances
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q5.type.errors %}
+                                    {{ form_m2_ch3_q5.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q5.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q5.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q5.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+<!--Section 3-->
+    <section id="methodology" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+
+        <div class="container">
+            <h2>Towards a new generation of human development metrics for the Anthropocene</h2>
+
+            <p>
+                Human development is dynamic. So the way we measure it must be, too. Over the years,
+                new dashboards and indices have been introduced. How do we measure human development in the Anthropocene?
+                </br>
+                </br>
+                In line with a central theme of this chapter, there is no one-size-fits-all tool or metric. Instead, this section introduces
+                and explores a suite of possibilities, including an experimental <strong>Planetary pressures adjusted Human Development Index</strong>.
+            </p>
+
+
+        <h3>One index to rule them all?</h3>
+
+
+        <!--Text-Image-->
+        <div class="text_image_css">
+            <div>
+                <p>
+                    Confronting the Anthropocene calls for a <strong>new generation of human development metrics</strong>. The Human Development Index (HDI)
+                    introduced in 1990 was intended to be a general index for global assessment and critique based on a minimal listing of capabilities
+                    focused on enjoying a basic quality of life. Clear and simple, and focused on <strong>income</strong>,<strong> education</strong> and <strong>health</strong>,
+                    it shaped public and political debate and reoriented objectives and actions. It has since been augmented by the <strong>Inequality-adjusted HDI</strong>,
+                    the <strong>Gender Development Index</strong>, the <strong>Gender Inequality Index</strong> and the <strong>Multidimensional Poverty Index</strong>.
+                    </br>
+                    </br>
+                    The inclusion of <strong>income</strong> in the HDI was intended only as <strong>a proxy for capabilities</strong> other than <strong>education</strong> and <strong>health</strong>,
+                    as something instrumentally important for achievements in those other capabilities. But gross national income (GNI) does not account for
+                    <strong>planetary pressures</strong>. So this section considers possible <strong>adjustments to the HDI’s income component</strong>, subtracting the
+                    <strong>social costs of carbon</strong> from GNI and discussing options to account for changes in total wealth that include <strong>natural capital</strong>.
+                    </br>
+                    </br>
+                    The section also presents an adjustment to the HDI that uses indicators of <strong>greenhouse gas emissions</strong> and <strong>material footprint</strong>.
+                    The adjustment is made by multiplying the HDI by an<strong> adjustment factor</strong> that <strong>accounts for planetary pressures</strong>.
+                    This adjustment factor is calculated as the arithmetic mean of indices measuring carbon dioxide emissions per capita—which speaks to
+                    the challenge of shifting away from fossil fuels for energy—and the material footprint per capita—which relates to the challenge of closing
+                    material cycles. <strong>This Planetary pressures–adjusted HDI provides a sense of the possibilities for achieving high HDI values with lower
+                    emissions and resource use</strong>.
+                </p>
+            </div>
+            <img
+            src="{{url_for('static', filename='figures/se/ch3/HDI_PHDI.svg')}}"
+                    alt=""/>
+        </div>
+
+        <h3>The income component and planetary pressures</h3>
+
+            <p>
+                This section builds on proposals to add environmental and sustainability dimensions to the HDI  but explores <strong>metrics</strong> guided by the
+                importance of going beyond sustaining. It focuses on the implications of accounting for planetary pressures by adjusting the income component
+                of the HDI.
+            </p>
+
+            <!--Enumerated list (table)-->
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Social cost of carbon</div>
+                  <p class="text-right">
+                      The HDI’s indicator for the income dimension is Gross National Income (GNI). “Gross” is the rogue word in this concept be cause it fails to account for
+                      the depreciation of capital assets  and ignores <strong>natural capital</strong> and the <strong>social costs</strong> (borne by everyone) of
+                      environmental damage. <strong>Other income-based indicators</strong> take a broader view of net flows from capital and adjust for natural resource
+                      depletion and damage from emissions and pollution. Here we explore <strong>a simpler and more direct adjustment to GNI by subtracting the social
+                      costs of carbon dioxide emissions</strong>. Again, this is driven by the importance of encouraging a transformation in energy use to lower greenhouse gas
+                      emissions. This is not meant to accurately capture the full social costs of environmental damage or the overuse of resources not in GNI.
+                      </br>
+                      </br>
+                      The social cost of carbon is the economic cost attributable to an additional tonne of carbon dioxide emissions or its equivalent.
+                      Estimates of this cost depend on several assumptions and parameter choices and span a wide range. The UNDP (2020) consider <strong>two estimates</strong>:
+
+                      <ul>
+                        <li>One proposed by the <strong>International Monetary Fund </strong>sets the cost of carbon in 2030 at $75 per
+                            tonne of carbon dioxide—in 2017 US dollars and covering all fossil fuels. It is based on a model showing that the impact of a global carbon t
+                            ax at this level would be consistent with countries meeting their Paris Agreement pledges.
+                        </li>
+                        <li>The other estimate is from a recent application of the <strong>Dynamic Integrated Climate-Economy integrated assessment model</strong>.
+                            It includes the latest climate science and reflects a broad range of expert recommendations on social discount rates a
+                            key parameter in the model that weighs the value today of future benefits and costs. The median expert view on discount
+                            rates gives a carbon social cost of around $200 per tonne of carbon dioxide in 2020 (in 2010 international dollars).
+                        </li>
+                    </ul>
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Ecological Footprint</div>
+                  <p class="text-right">
+                      The ecological footprint measures the amount of material extracted (biomass, fossil fuels, metal-ores (minerals) and nonmetal-ores)
+                      to meet domestic final demand for goods and services, regardless of where extraction occurs. It is a consumption-based measure that
+                      <strong>accounts for international trade</strong>. It also indicates <strong>pressures on the biosphere</strong> exerted by socioeconomic
+                      activities, since it includes the use of biomass—thus indirectly reflecting impacts of actions such as land use change on the loss of biosphere integrity.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            </br>
+            <p>
+                The adjustment corresponds to multiplying the HDI by an adjustment factor, creating the Planetary pressures–adjusted HDI (PHDI)
+                (Figure: Planetary Human Development Index). If a country puts no pressure on the planet, its PHDI and HDI would be equal, but the PHDI falls below the
+                HDI as pressure rises. The <strong>adjustment factor</strong> is calculated as the arithmetic mean of indices measuring <strong>carbon dioxide emissions per capita</strong>,
+                which speaks to the energy transition away from fossil fuels, and<strong> material footprint per capita</strong>, which relates to closing material cycles
+            </p>
+
+            <h3>Questions:</h3>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q6.csrf_token }}
+                            <legend class="border-bottom mb-5">Question 6</legend>
+                            <p class="card-text">
+                                According with the International Monetary Fund, the estimated social cost of carbon in 2030 will be
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q6.type.errors %}
+                                    {{ form_m2_ch3_q6.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q6.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q6.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q6.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q7.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 7</legend>
+                            <p class="card-text">The Planetary pressures–adjusted HDI (PHDI) is worked out as
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q7.type.errors %}
+                                    {{ form_m2_ch3_q7.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q7.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q7.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q7.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!--Section 4-->
+    <section id="analysis" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#6c757d;">
+        <div class="container">
+
+            <h2>Human development progress based on the Planetary pressures–adjusted Human Development Index: A new lens</h2>
+
+            <p>
+                The global PHDI offers a summary view of the evolution in human development and the associated planetary
+                pressures—the world has consistently increased planetary pressures per capita over the past three decades.
+                The PHDI is not only lower than the HDI; it is also
+                growing more slowly. The gap between the conventional assessment of development
+                (the HDI) and the new perspective to navigate the Anthropocene (the experimental PHDI) has been widening.
+
+            </p>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_planet_presure_HDI.svg')}}"
+                        alt=""/>
+                <img
+                src="{{url_for('static', filename='figures/se/ch3/HDI_planet_presure_HDI_trends.svg')}}"
+                        alt=""/>
+            </div>
+
+            <p>
+                In figure (Planetary pressures vs HDI) the horizontal axis shows the HDI, and the vertical axis shows the index of
+                planetary pressures (which is one minus the adjustment factor for planetary pressures that is multiplied by the HDI to generate
+                the PHDI). Also plotted are contour lines corresponding to the same PHDI values that result from different combinations of the
+                HDI and the index of planetary pressures (isoquants). PHDI values increase as these lines move towards the bottom right corner.
+                This corner (highlighted in green in the figure) is the aspirational destination of the human development journey in the Anthropocene.
+                </br>
+                </br>
+                For instance, countries in positions A and B have very different HDI values (0.55 and 0.85) but the same PHDI value (0.55) because
+                the greater progress in HDI in country B has been coupled with much greater planetary pressures. This simple example shows the importance of a joint
+                assessment of socioeconomic and planetary pressure indicators as part of a single framework.
+                </br>
+                </br>
+                Looking at the trajectory of countries over the past three decades shows different paths across human development groups. Low and medium human
+                development countries have been able to improve social and economic conditions substantially without a high burden
+                on planetary pressures. But in high and very high human development countries, improvements on the HDI have been coupled with rising planetary pressures.
+                </br>
+                </br>
+                Although absolute planetary pressures have been growing, <strong>two aspects reflect some progress</strong>:
+
+                <ul>
+                    <li>
+                        After the 2008 global financial crisis a few developed countries have shown some <strong>decoupling of human development gains from planetary pressures</strong>.
+                        For instance, on average, the top 10 countries on the PHDI have increased their HDI value and reduced their planetary pressures over the last decade
+                    </li>
+                    <li>
+                        There is some evidence <strong>more broadly of relative decoupling</strong>. The curve corresponding to the average performance on the HDI and planetary pressures for all
+                        countries moved slightly towards the bottom right-hand corner between 1990 and 2019 (Figure: Planetary pressures vs HDI, trends).
+                    </li>
+                </ul>
+
+            </p>
+
+
+            <h3>Questions:</h3>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q8.csrf_token }}
+                            <legend class="border-bottom mb-5">Question 8</legend>
+                            <p class="card-text">
+                                Contries A and B have the same HDI, but the carbon emissions in country A are larger,
+                                which country has a larger PHDI?
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q8.type.errors %}
+                                    {{ form_m2_ch3_q8.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q8.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q8.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q8.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch3_q9.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 9</legend>
+                            <p class="card-text">The PHDI trend in the last decade is
+                                <strong>(chose one of the next options):</strong>
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch3_q9.type.errors %}
+                                    {{ form_m2_ch3_q9.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch3_q9.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch3_q9.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch3_q9.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock content %}

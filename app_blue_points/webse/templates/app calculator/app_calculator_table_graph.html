@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+
+            <div class="section_caculator_graph_css">
+                <div class="box">
+                    <canvas id="emissions_by_transport"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="over_time_emissions"></canvas>
+                </div>
+            </div>
+
+            <div class="section_caculator_table_css">
+                <div class="box">
+                    ...
+                </div>
+                <div class="box">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">User</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Kilometres</th>
+                                <th scope="col">Transport</th>
+                                <th scope="col">Fuel</th>
+                                <th scope="col">Co2</th>
+                                <th scope="col">Ch4</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entry in entries %}
+                                <tr>
+                                    <th scope="row">{{ current_user.username }}</th>
+                                    <td>{{ entry.date.strftime("%m-%d-%Y") }}</td>
+                                    <td>{{ entry.kms }}</td>
+                                    <td>{{ entry.transport }}</td>
+                                    <td>{{ entry.fuel }}</td>
+                                    <td>{{ entry.co2 }}</td>
+                                    <td>{{ entry.ch4 }}</td>
+                                    <td>{{ entry.total }}</td>
+                                    <td><a href="{{ url_for('app_calculator.delete_emission', entry_id = entry.id) }}" class="btn btn-outline-danger btn-sm">Delete</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box">
+                    ...
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% block javascript %}
+<script>
+    let emission_transport_data = JSON.parse({{ emissions_by_transport | tojson }})
+
+    Chart.scaleService.updateScaleDefaults('linear', {
+            ticks: {
+                min: 0
+            }
+    });
+
+
+    let emissions_by_transport_chart = new Chart(emissions_by_transport, {
+            type: 'pie',
+            data: {
+            labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                datasets: [{
+                    label: "Income Vs Expenses",
+                    data: emission_transport_data,
+                    backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
+                        '#f2935c', '#5fd9cd', '#f2d95c', '#f2b84b', '#f2b84b' ],
+
+                    borderWidth: 1,
+                    hoverBorderColor: "black",
+                    hoverBorderWidth: 2,
+                    hoverBackgroundColor: 'rgba(154, 245, 140)',
+                    pointHoverRadius: 5
+                }],
+            },
+            options: {
+                    title: {
+                        display: true,
+                            text: "Emissions by type of transport (5 last days)",
+                                fontSize: 20,
+                    },
+                    legend: {
+                        position: "right",
+                            labels: {
+                            fontColor: "gray"
+                        },
+                        display: true,
+                    },
+
+                    elements: {
+                        hitRadius: 3,
+                    }
+            }
+        })
+        
+        over_time_emissions = JSON.parse({{over_time_emissions | tojson}})
+        labels = JSON.parse({{ dates_label  | tojson}})
+
+        new Chart(document.getElementById("over_time_emissions"), {
+                type: "line",
+                data:
+                {
+                    labels: labels,
+                    datasets: [{
+                        label: "Emissions Over Time (5 past days)",
+                        
+                        data: over_time_emissions,
+                        fill: false,
+                        borderColor: '#5fd9cd',
+                        lineTension: 0.1
+                    }]
+                },
+                options: {}
+            });
+
+</script>
+{% endblock%}
+{% endblock content %}

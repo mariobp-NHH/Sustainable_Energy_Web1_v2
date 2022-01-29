@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+</br>
+<section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+
+        <div class="container">
+            <div class="section_query_chat_css">
+                <div class="box">
+
+                </div>
+                <div class="box">
+                <h3 style="justify-content:center;">Choose a chat group to post your message</h3>
+                <p>Select the chat group in which you want to post a new message:
+                </p>
+                <div class="container_buttons_links_section_query_chat">
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_home') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat Home</a>
+                   </div>
+                </div>
+                <div class="container_buttons_links_section_query_chat">
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_app_g1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat App, Group 1</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_app_g2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat App, Group 2</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_app_g3') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat App, Group 3</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_app_g4') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat App, Group 4</a>
+                   </div>
+                </div>
+                <div class="container_buttons_links_section_query_chat">
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_se_g1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat SE, Group 1</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('chats.new_chat_create_se_g2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat SE, Group 2</a>
+                   </div>
+                </div>
+                </div>
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+</section>
+
+{% endblock content %}

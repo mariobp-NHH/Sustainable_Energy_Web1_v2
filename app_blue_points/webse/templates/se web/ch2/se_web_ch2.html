@@ -1,0 +1,979 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!-- Header -->
+    <section>
+        <header class="header_css", style="background-color=#f2d95c">
+            <div class="container">
+                <div>
+                    <h1> <span class="text-warning"> Chapter 2. Metrics: Ecological footprint and biocapacity </span></h1>
+                    <p class="mb-1">
+                      In this chapter we study how to measure the ecological footprint per capita in every country.
+                        First, we define the concept. Second, we provide an overview of the concepts ecological footprint
+                        and biocapacity, Third, we present the methodology to work out the ecological footprint and the biocapacity.
+                        Finally, we present the historical trends of the ecological footprint and the biocapacity.
+                    </p>
+                    </br>
+                    <div class="container_buttons_links_header">
+                       <div class="btn">
+                           <a href="https://energyio.org/materialch2.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Material</a>
+                       </div>
+                       <div class="btn">
+                            <a href="https://energyio.org/powerpointch2.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Presentation (latex)</a>
+                       </div>
+                    </div>
+                    </br>
+
+                   <div class="list-group", style="padding: 15px 0px;">
+                      <a href="#introduction" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Introduction</h5>
+                        </div>
+                        <p class="mb-1">
+                            What do you know about the term "ecological footprint"? What do you know about the term "biocapacity"?
+                            In this chapter, we study
+                            the methodology to work out the ecological footprint and the biocapacity. We also study the historical
+                            trends of the ecological footprint.
+                        </p>
+
+                      </a>
+                      <a href="#definition" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Ecological footprint and biocapacity. Definition</h5>
+                        </div>
+                        <p class="mb-1">
+                            The eological footprint and the biocapacity are an account-based system of indicators whose underlying context
+                            is the recognition that Earth has a finite amount of biological production that supports all life on it.
+                        </p>
+                      </a>
+                       <a href="#account" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">National footprint and biocapacity accounts</h5>
+                        </div>
+                        <p class="mb-1">
+                            National Footprint and Biocapacity Accounts (NFAs) provide the core data required for all Ecological Footprint analysis worldwide.
+                        </p>
+                      </a>
+                      <a href="#methodology" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Methodology</h5>
+                        </div>
+                        <p class="mb-1">
+                            We study in detail the methodology to work out the ecological footprint and the biocapacity. We also study key aspects used in
+                            that methodology as the yield factor and the equivalence factor.
+                        </p>
+                      </a>
+                      <a href="#analysis" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Analysis</h5>
+                        </div>
+                        <p class="mb-1">
+                            We study the evolution of the ecological footprint in the last years. We also study with factors determine its growth, and the ecological footprint
+                            by country. We also connect the concepts of ecological footprint with the humand development index.
+                        </p>
+                      </a>
+                   </div>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/ch2_icon.svg')}}"
+                        alt=""/>
+            </div>
+        </header>
+    </section>
+
+
+<!--introduction-->
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+
+        <div class="container">
+            <div class="section_intro_css">
+                <div class="box">
+
+                </div>
+                <div class="box">
+                <h2 style="justify-content:center;">Introduction</h2>
+                <p>What do you know about the term "ecological footprint"? What do you know about the term "biocapacity"?
+                </br>
+                </br>
+                Do you know how to work out your ecological footprint? and the ecological footprint of a citizen in your country?
+                Do you know the methodology used to work out the ecological footprint? and the biocapacity?
+                </br>
+                </br>
+			    Do you know the historical trends of the ecological footprint in your country?
+                </p>
+                <div class="container_buttons_links_section_intro">
+                   <div class="btn">
+                       <a href="{{ url_for('se_module.se_web_ch2_ex1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Exercise 1</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('se_module.se_web_ch2_ex2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Exercise 2</a>
+                   </div>
+                   <div class="btn">
+                       <a href="{{ url_for('se_module.se_web_ch2_ex3') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Exercise 3</a>
+                   </div>
+                </div>
+                </div>
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+<!--green_economy-->
+    <section id="definition" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#6c757d;">
+        <div class="container">
+
+            <h2>Ecological footprint and biocapacity. Definition</h2>
+
+            The ecological footprint and the biocapacity are an account-based system of indicators whose underlying context is the recognition that
+            Earth has a finite amount of biological production that supports all life on it. A widely recognized measure of sustainability,
+            the Ecological Footprint provides an integrated,
+            multiscale approach to tracking the use and overuse of natural resources, and the consequent impacts on ecosystems and biodiversity.
+            </br>
+            </br>
+            How much of the biosphere’s (or any region’s) regenerative capacity does human activity (“activities” can refer to
+            the entire consumption metabolism of humanity, the consumption of a given population (such as a city), a production process,
+            or something as small and discreet as producing 1 kilogram of durum wheat spaghetti) demand? <strong>How much of the planet’s (or a region’s)
+            regenerative capacity does a defined activity require from nature?</strong>
+
+            <div class="external_links_css">
+                <p><u>Footprint calculators.</u>
+			        There exist different online calculators to work out your personal footprint.
+                    To work out your footprint, and to know more about the methodology that they use to work out that footprint, you can visit:</p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.footprintnetwork.org/" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Global Footprint Network Calculator</a>
+                   </div>
+                   <div class="btn">
+                        <a href="https://footprint.wwf.org.uk" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">WWF Calculator</a>
+                   </div>
+                </div>
+                <p><u>Carbon calculators.</u>
+			    To work out your carbon emissions and to know more about projects to reduce carbon emissions visit:</p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.carbonfootprint.com/calculator.aspx" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Carbon Footprint Calculator</a>
+                   </div>
+                </div>
+                <p>To work out your flight carbon emissions visit:</p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">ICAO Carbon Emissions Calculator</a>
+                   </div>
+                </div>
+            </div>
+
+            <div class="text_image_css">
+                <div>
+                    <ol class="list-group list-group-numbered">
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Ecological Footprint</div>
+                          <p class="text-right">The <strong>Ecological Footprint</strong> is derived by tracking how much biologically
+                          productive area it takes to provide for all the competing demands of people.
+                          These demands include space for food growing, fiber production, timber regeneration, absorption of
+                          carbon dioxide emissions from fossil fuel burning, and accommodating built infrastructure.
+                          A country’s consumption is calculated by adding imports to and subtracting exports from its national production.
+                          </br>
+                          </br>
+                          All commodities carry with them an embedded amount of bioproductive land and sea area necessary to
+                          produce them and sequester the associated waste. International trade flows can thus be seen as flows of
+                          embedded Ecological Footprint.
+                          </br>
+                          </br>
+                          The Ecological Footprint uses yields of primary products (from cropland, forest, grazing land and fisheries)
+                          to calculate the area necessary to support a given activity.</p>
+                        </div>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Biocapacity</div>
+                          <p class="text-right"><strong>Biocapacity</strong> is measured by calculating the amount of biologically productive land and
+                          sea area available to provide the resources a population consumes and to absorb its wastes, given current technology
+                          and management practices. To make biocapacity comparable across space and time, <strong>areas are adjusted proportionally
+                          to their biological productivity</strong>. These adjusted areas are expressed in “global hectares”.
+                          Countries differ in the productivity of their ecosystems, and this is reflected in the Accounts.
+                          </br>
+                          </br>
+                          Results from this analysis shed light on a country’s ecological impact. A country has an ecological reserve if its Footprint is smaller than its
+                          biocapacity; otherwise it is operating with an ecological deficit. The former are often referred to as ecological creditors,
+                          and the latter ecological debtors.
+                            </br>
+                            </br>
+                          Today, most countries, and the world as a whole, are running ecological deficits. In fact, today <strong>over 85% of the world population
+                          lives in countries with an ecological deficit</strong>. The world’s ecological deficit is referred to as global ecological overshoot.</p>
+                        </div>
+                      </li>
+                    </ol>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/footprint_methodology1.svg')}}"
+                        alt=""/>
+            </div>
+            <!--External link-->
+            <div class="external_links_css">
+                <p><u>Earth Overshoot Day:</u>
+                </br>
+			    Earth Overshoot Day marks the date when humanity has exhausted nature’s budget for the year. For the rest of the year, we are maintaining our
+                    ecological deficit by drawing down local resource stocks and accumulating carbon dioxide in the atmosphere. We are operating in overshoot.
+                </br>
+                For more information about the Earth Overshoot Day visit:
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.footprintnetwork.org/our-work/earth-overshoot-day/" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Earth Overshoot Day (Global Footprint Network)</a>
+                   </div>
+                </div>
+            </div>
+
+            <h5>Questions:</h5>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q1.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 1</legend>
+                            <p class="card-text">The ecological footprint is defined as
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q1.type.errors %}
+                                    {{ form_m2_ch2_q1.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q1.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q1.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q1.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q2.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 2</legend>
+                            <p class="card-text">The biocapacity is defined as
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q2.type.errors %}
+                                    {{ form_m2_ch2_q2.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q2.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q2.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q2.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--sustainable_energy-->
+    <section id="account" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#007bff;">
+        <div class="container">
+            <h2>National footprint and biocapacity accounts</h2>
+            <p> National Footprint and Biocapacity Accounts (NFAs) provide the core data required for all Ecological
+                Footprint analysis worldwide.
+                </br>
+                </br>
+                The Accounts measure the ecological resource use and resource capacity of nations over time. Based on approximately
+                <strong>15,000 data points per country per year</strong>, the Accounts calculate the Footprints of more than 200 countries,
+                territories, and regions from 1961 to the present.
+                </br>
+                </br>
+                The calculations in the National Footprint and Biocapacity Accounts are based on <strong>United Nations or UN affiliated data sets</strong>,
+                including those published by the Food and Agriculture Organization, <strong>United Nations Commodity Trade Statistics Database</strong>,
+                and the <strong>UN Statistics Division</strong>, as well as the <strong>International Energy Agency</strong>. Supplementary data sources include
+                studies in peer-reviewed science journals and thematic collections. Of the countries, territories, and regions analyzed in the Accounts,
+                150 had populations over one million and typically have more complete and reliable data sets. For most of those, Global Footprint Network
+                is able to provide time series of both <strong>Ecological Footprint</strong> and <strong>biocapacity</strong>.
+            </p>
+
+            <!--External link-->
+            <div class="external_links_css">
+                <p>For more information about the data used to work out the national footprint and biocapacity visit:</p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://data.footprintnetwork.org" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">The Global Footprint Network Data</a>
+                   </div>
+                </div>
+                <p><u>National Footprint Accounts (NFA):</u> The next video summarizes the
+                main aspects of the National Footprint Accounts (NFA): National
+                Footprint Accounts – Ecological Balance Sheets for 180+
+                Countries.
+                </p>
+                <div class="container_buttons_links_external_links_css">
+                   <div class="btn">
+                       <a href="https://www.youtube.com/watch?v=_T5M3MiPfW4" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">National Footprint Accounts (NFA)</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Section 3-->
+    <section id="methodology" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+
+        <div class="container">
+            <h2>Methodology</h2>
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>The <strong>Ecological Footprint of consumption</strong> is calculated as:
+                        </br>
+                        </br>
+                         <math display='block'>
+                         <semantics>
+                          <mrow>
+                           <msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>F</mi></mrow></mstyle>
+                            <mi>C</mi>
+                           </msub>
+                           <mo>=</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>F</mi></mrow></mstyle>
+                            <mi mathvariant="normal">P</mi>
+                           </msub>
+                           <mo>+</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>F</mi></mrow></mstyle>
+                            <mi>I</mi>
+                           </msub>
+                           <mo>&#x2212;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>F</mi></mrow></mstyle>
+                            <mi>E</mi>
+                           </msub>
+                           </mrow>
+                          <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+                          feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                          hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                          4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+                          vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+                          fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaWaaubeaeqale
+                          aacaWGdbaabeqdbaGaamyraiaadAeaaaGccqGH9aqpdaqfqaqabSqa
+                          aiGaccfaaeqaneaacaWGfbGaamOraaaakiabgUcaRmaavababeWcba
+                          Gaamysaaqab0qaaiaadweacaWGgbaaaOGaeyOeI0Yaaubeaeqaleaa
+                          caWGfbaabeqdbaGaamyraiaadAeaaaaaaa@4388@
+                          </annotation>
+                         </semantics>
+                        </math>
+                        </br>
+                        The Ecological Footprint of consumption is equal to the is the Ecological Footprint of production
+                        plus  the Ecological Footprint of Imports minus the Ecological Footprint of exports.
+                        </br>
+                        </br>
+                        Human-harvest or waste-production flow, imports, and exports are quantified in mass per time
+                        and translated into <strong>global hectares</strong> through the following equation:
+                        </br>
+                        </br>
+                        <math display='block'>
+                         <semantics>
+                          <mrow>
+                           <msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>F</mi></mrow></mstyle>
+                            <mi>P</mi>
+                           </msub>
+                           <mo>=</mo><mfrac>
+                            <mrow>
+                             <msub>
+                              <mstyle mathsize='140%' displaystyle='true'><mi>P</mi></mstyle>
+                              <mrow></mrow>
+                             </msub>
+                             </mrow>
+                            <mrow>
+                             <msub>
+                              <mstyle mathsize='140%' displaystyle='true'><mi>Y</mi></mstyle>
+                              <mi>N</mi>
+                             </msub>
+                             </mrow>
+                           </mfrac>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>Y</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>Q</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>I</mi><mi>Y</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           </mrow>
+                          <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+                          feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                          hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                          4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+                          vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+                          fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaWaaubeaeqale
+                          aacaWGqbaabeqdbaGaamyraiaadAeaaaGccqGH9aqpdaWcaaqaamaa
+                          vababeWcbaaabeqdbaGaamiuaaaaaOqaamaavababeWcbaGaamOtaa
+                          qab0qaaiaadMfaaaaaaOGaeyyXIC9aaubeaeqaleaaaeqaneaacaWG
+                          zbGaamOraaaakiabgwSixpaavababeWcbaaabeqdbaGaamyraiaadg
+                          facaWGgbaaaOGaeyyXIC9aaubeaeqaleaaaeqaneaacaWGjbGaamyw
+                          aiaadAeaaaaaaa@4B38@
+                          </annotation>
+                         </semantics>
+                        </math>
+                        </br>
+                        <strong>Ecological Footprint</strong> associated with a product or waste  (global hectares) is equal to:
+                        <ul>
+                            <li>the amount of <strong>Product</strong> extracted or waste generated (tones/year),</li>
+                            <li>divided by the <strong>National-Average Yield</strong> for product extraction or waste absorption (tones / national hectares * year),</li>
+                            <li>multiplied by the <strong>Yield Factor</strong> of a given land use type within a country (world average hectares / national average hectares),</li>
+                            <li>multiplied by the <strong>Equivalence Factor</strong> for given land use type (global average hectares / world average hectares),</li>
+                            <li>multiplied by the <strong>Intertemporal Yield Factor</strong> of a given land use type, no units.</li>
+                        </ul>
+                    </p>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/footprint_methodology.svg')}}"
+                        alt=""/>
+            </div>
+            <p>For each land-use type, the <strong>Equivalence Factor</strong> is the ratio of a given land type’s average global productivity divided by the average
+                global productivity of the entire planet’s productive surfaces. EQF makes it possible to compare the land used
+                for a given product category with the average global bioproductive surface area, which may be of higher or lower average productivity.
+                </br>
+                </br>
+                For each country, the Ecological Footprint of production of a single footprint category is
+                calculated by <strong>summing all products of that footprint category</strong> (such as rice, wheat, corn for cropland).
+                The total Ecological Footprint of production of a country is the sum of the Ecological Footprint of all product categories combined.
+                </br>
+                </br>
+                Detailed equations and their application for each of the <strong>six Ecological Footprint subcomponents</strong>
+                (cropland, grazing land, fishing grounds, forest for forest products, built-up land, and carbon footprint) can be found in
+                (Lin et al., 2019). The next table introduces briefly those subcomponents.
+            </p>
+
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Carbon</div>
+                  <p class="text-right">
+                      The carbon Footprint represents the area of forest land required to sequester anthropogenic carbon dioxide emissions.
+                      The National Footprint Account workbook 2019 (NFA 2019) (Lin et al., 2019) calculates the Footprint of carbon dioxide emissions using
+                      several parameters including domestic fossil fuel combustion and electricity use, embodied carbon in traded items and electricity,
+                      a country’s share of global international transport emissions, and non-fossil-fuel sources.
+                      </br>
+                      </br>
+
+                      The total amount of carbon dioxide allocated to each country is converted into global hectares based on the
+                      <strong>Footprint intensity of carbon</strong>. This conversion factor is derived from the following:
+
+                      <ul>
+                            <li>the yield of the productive land that is required to absorb the carbon dioxide emissions</li>
+                            <li>the amount of carbon absorbed by oceans</li>
+                            <li>an equivalence factor for carbon as a land type</li>
+                            <li>an adjustment factor for temporal changes in yield from the forest</li>
+                      </ul>
+                      </br>
+                      The International Energy Agency (IEA) tracks carbon dioxide emissions from fossil fuel combustion across 45 different economic sectors.
+                    The IEA also publishes the total world emissions in international transport in the form of International Aviation bunker fuel and International
+                    Marine bunker fuels which are aggregated to “international transport emissions.” These emissions are allocated to countries according to
+                    their respective domestic fossil fuel combustion by the proportion of national to world imports. Emissions from cement are attributed to the
+                    producing country; those from gas flaring emissions are distributed based on a country’s percentage of World fossil fuel consumption.
+
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Cropland Footprint</div>
+                  <p class="text-right">
+                      The cropland Footprint reflects the amount of land necessary to grow all crops consumed by humans and livestock. This includes agricultural products,
+                      market animal feed, and cropped grasses used as livestock feed.
+                      </br>
+                      </br>
+                      Cropland yields are calculated for each crop type by dividing the amount of crop produced by the amount of area harvested.
+                      This differs from other land use types in that yields for cropland reflect an actual harvest yield, whereas other yields
+                      are calculated based on regeneration rates. Harvest yields and regeneration rates for crops are equal by definition, as humans
+                      manage all growth on cropland for harvest.
+                      </br>
+                      </br>
+                      The NFA 2019 workbook tracks the production of 177 categories of agricultural products. The list of products,
+                      including both names and codes, has been generated from a complete list of all agricultural goods included in
+                      the UN’s FAOSTAT ProdSTAT database as of 2015 (FAO ProdSTAT Statistical Database).
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Grazing land Footprint</div>
+                  <p class="text-right">
+                      The grazing land Footprint assesses demand for grazing land to feed livestock and the embodied demand for grazing land in traded goods.
+                      This is the most logically complex section of NFA 2019. The calculations estimate the total feed requirements of all livestock produced and
+                      the percentage of livestock energy requirements derived from concentrate feeds, forage crops, and crop residues.
+                      The difference between total feed requirement and total cropped feed supply is taken to equal the demand for grazing land.
+                      </br>
+                      </br>
+                      The grazing land section of NFA 2019 relies on the methodology and data proposed by Haberl et al. (2007) for calculating
+                      human appropriation of net primary production (NPP). The calculation starts with the number of livestock in a country and
+                      their feed requirements. These feed requirements are partially filled through market feed (crops grown specifically to be fed to animals),
+                      residues (crop scraps that can be fed to livestock but not to humans), and cropped grasses (grasses that are grown on cropland and cut specifically
+                      to be fed to livestock). Once the feed demand satisfied by the above sources has been accounted for, the remaining amount of feed required is assumed
+                      to be provided by grazing land. The amount of grazing land required is based on dividing the grass feed required by the average grass yield of rangeland.
+
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Fishing Grounds Footprint</div>
+                  <p class="text-right">
+                      The Fishing Grounds Footprint represents the demands of fisheries on aquatic ecosystems as the equivalent surface area required to sustainably support a country’s catch.
+                      </br>
+                      </br>
+                      The Fishing Grounds Footprint is calculated by dividing the amount of primary production consumed by an aquatic species over its
+                      lifetime by an estimate of the harvestable primary production per hectare of marine area. This harvestable primary production
+                      is based on a global estimate of the sustainable catch of several aquatic species (Pauly and Christensen, 1995). These sustainable
+                      catch figures are converted into primary production equivalents, and divided by the total area of continental shelf. This same calculation
+                      is currently used for inland fish as well.
+                      </br>
+                      </br>
+                      NFA 2019 tracks the production of 1,941 marine and freshwater species, including fish, invertebrates, mammals, and aquatic plants.
+                      The Fishing Grounds Footprint includes all wild caught fish and production through aquaculture. The complete list of species corresponds to all
+                      species tracked in FishSTAT (FAO FishSTAT Fisheries Statistical Database).
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Forest products Footprint</div>
+                  <p class="text-right">
+                      The forest products Footprint assesses human demand for the products of the world’s forests. The forest products Footprint of production
+                      is comprised of two broad types of primary product: wood used for fuel; and timber and pulp used as a raw material to produce derived wood products.
+                      </br>
+                      </br>
+                      The forest products Footprint represents the area of world average forest land needed to supply wood for fuel, construction,
+                      and paper. To calculate the Footprint of forest products, timber harvests are compared against the net annual growth
+                      rates of the world’s forests.
+                      </br>
+                      </br>
+                      %Global and country specific forest yields (i.e., net annual increments) are drawn from a combination of sources,
+                      including the FAO Temperate and Boreal Forest Resource Assessment, Mancini et al. (2015), and Global Footprint Network
+                      calculations based on an IPCC accounting methodology (IPCC 2006).
+                      </br>
+                      </br>
+                      The NFA 2019 workbook tracks the production of primary forest products and products derived from them. The complete list of
+                      products has been generated from a list of all forest products included in the UN’s FAOSTAT ForeSTAT database as of 2015
+                      (FAO ForeSTAT Statistical Database). The product names and codes correspond to those used in this database.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">The built-up land Footprint</div>
+                  <p class="text-right">
+                      The built-up land Footprint represents bioproductive land that has been physically occupied by human activities.
+                      </br>
+                      </br>
+                      The NFA 2019 workbook tracks infrastructure areas required for housing, transportation, and industrial production.
+                      The calculations assume that infrastructure area covers former cropland, and apply the yield and equivalence factors for
+                      cropland to the calculation of the Footprint.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            </br>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        Similarly, <strong>biocapacity</strong> can be measured in global hectares at any scale, from a single farm to the entire planet.
+                        The following formula details how biocapacity is calculated at the national level for each
+                        biocapacity land-use category:
+                        </br>
+                        </br>
+                        <math display='block'>
+                         <semantics>
+                          <mrow>
+                           <msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>B</mi><mi>C</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           <mo>=</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mi>A</mi></mstyle>
+                            <mi>N</mi>
+                           </msub>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>Y</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>I</mi><mi>Y</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           <mo>&#x22C5;</mo><msub>
+                            <mstyle mathsize='140%' displaystyle='true'><mrow>
+                             <mi>E</mi><mi>Q</mi><mi>F</mi></mrow></mstyle>
+                            <mrow></mrow>
+                           </msub>
+                           </mrow>
+                          <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+                          feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                          hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                          4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+                          vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+                          fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaWaaubeaeqale
+                          aaaeqaneaacaWGcbGaam4qaaaakiabg2da9maavababeWcbaGaamOt
+                          aaqab0qaaiaadgeaaaGccqGHflY1daqfqaqabSqaaaqab0qaaiaadM
+                          facaWGgbaaaOGaeyyXIC9aaubeaeqaleaaaeqaneaacaWGjbGaamyw
+                          aiaadAeaaaGccqGHflY1daqfqaqabSqaaaqab0qaaiaadweacaWGrb
+                          GaamOraaaaaaa@4910@
+                          </annotation>
+                         </semantics>
+                        </math>
+                        </br>
+                        <strong>The biocapacity</strong> in (global hectares) is equal to:
+                        <ul>
+                            <li><strong>Area</strong> of a given land use type within a country (national average hectares),</li>
+                            <li>multiplied by the <strong>Yield Factor</strong> of a given land use type within a country (world average hectores / national average hectares),</li>
+                            <li>multiplied by the <strong>International Yield Factor</strong> of a given land use type for that year (no units)</li>
+                            <li>multiplied by the <strong>Equivalence Factor</strong> for given land use type (global average hectares / world average hectares),</li>
+                        </ul>
+
+                    </p>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/biocapacity_methodology.svg')}}"
+                        alt=""/>
+            </div>
+            <p>
+                Biocapacity refers to the amount of biologically productive land and water areas available within the boundaries of a given country.
+                Biocapacity is calculated for each of the five major land use types: cropland, grazing land, fishing grounds (marine and inland waters),
+                forest, and built-up land. Built-up land biocapacity is included here because, though built-up land does not generate resources, buildings and
+                infrastructure occupy the biocapacity of the land they cover. The carbon Footprint does not have corresponding biocapacity because NFA 2019 assumes
+                all carbon uptake as a demand on forest land biocapacity. Therefore, including carbon dioxide biocapacity in addition to forest land biocapacity
+                would lead to double counting.
+            </br>
+            </br>
+                <strong>Yield factors</strong> reflect the relative productivity of national and world average hectares of a given land use type. Each country,
+                in each year, has a yield factor for each land use type. Yield factors are used in biocapacity calculations when biocapacity is reported in global hectares.
+            </p>
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        <strong>Equivalence factors</strong> reflect the relative productivity of world average hectares of different land use types.
+                        Equivalence factors are the same for all countries, and change slightly from year to year. Equivalence factors are calculated in
+                        a satellite workbook to the NFA 2019 which is available upon request.
+                        </br>
+                        </br>
+                        Equivalence factors are calculated using suitability indexes from the Global Agro-Ecological Zones (GAEZ) model, combined
+                        with information about actual areas of cropland, forest, and grazing area from FAOSTAT (Global Agro-Ecological Zones 2000; FAO
+                        ResourceSTAT Statistical Database). The GAEZ model divides all land globally into five categories, each of which is assigned a suitability score:
+
+                        <ul>
+                            <li>Very Suitable (VS): 0.9</li>
+                            <li>Suitable (S): 0.7</li>
+                            <li>Moderately Suitable (MS): 0.5</li>
+                            <li>Marginally Suitable (mS): 0.3</li>
+                            <li>Not Suitable (NS): 0.1</li>
+                        </ul>
+
+
+                    </p>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/equivalence_factors.svg')}}"
+                        alt=""/>
+            </div>
+            <p>
+                The equivalence factor calculation assumes that the most productive land is put to its most productive use. The calculations assume that the most suitable land
+                available will be planted to cropland, the next most suitable land will be under forest, and the least suitable land will be grazing area.
+                The equivalence factor is calculated as the ratio of the average suitability index for a given land use type divided by the average suitability index for all land use types.
+                </br>
+                </br>
+                The equivalence factor for built up area is set equal to the equivalence factor for cropland, reflecting the assumption that built up areas occupy former cropland.
+                </br>
+                </br>
+                The equivalence factor for marine area is calculated such that a single global hectare of pasture will produce an amount of calories of beef equal to the
+                amount of calories of salmon that can be produced on a single global hectare of marine area. The equivalence factor for inland water is set equal to the
+                equivalence factor for marine area.
+            </p>
+
+            <h5>Questions:</h5>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q3.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 3</legend>
+                            <p class="card-text">To work out the carbon footprint of a country, it is necessary to include
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q3.type.errors %}
+                                    {{ form_m2_ch2_q3.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q3.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q3.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q3.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q4.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 4</legend>
+                            <p class="card-text">To work out the biocapacity of a country, it is necessary include
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q4.type.errors %}
+                                    {{ form_m2_ch2_q4.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q4.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q4.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q4.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q5.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 5</legend>
+                            <p class="card-text">The yield factor for country and year
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q5.type.errors %}
+                                    {{ form_m2_ch2_q5.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q5.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q5.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q5.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q6.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 6</legend>
+                            <p class="card-text">Which categories are included in the equivalence factor?
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q6.type.errors %}
+                                    {{ form_m2_ch2_q6.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q6.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q6.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q6.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Section 4-->
+    <section id="analysis" class="p-5 p-lg-5 pt-lg-5 text-white text-center text-sm-start", style="background-color:#6c757d;">
+        <div class="container">
+
+            <h2>Analysis</h2>
+            <p>Humanity’s total <strong>Ecological Footprint</strong> has been increasing steadily at an average of 2.1 percent per year (SD = 1.9)
+                since 1961, nearly tripling from 7.0 billion gha in 1961 to 20.6 billion gha in 2014. The increase in Ecological Footprint
+                has been <strong>outpacing biocapacity</strong> increases, which have increased at an average of 0.5 percent per year (SD = 0.7),
+                from 9.6 billion gha in 1961 to 12.2 billion gha in 2014. Together, these results indicate that Earth’s ecological overshoot
+                began in the 1970s; further, ecological overshoot continues to grow at an average rate of 2.0 percent (SD = 2.3) per year.
+                In 2014, humanity’s Ecological Footprint was 69.6 percent greater than Earth’s biocapacity.
+            </p>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        During the same period, <strong>per capita Ecological Footprint</strong> increased by 24 percent (2.29 to 2.84 gha per person),
+                        while <strong>per capita biocapacity</strong> decreased by 46 percent (3.13 to 1.68 gha per person). The increase in total
+                        biocapacity and decrease in per capita biocapacity are indicative of a growing global population. More recently, the world
+                        Ecological Footprint per person decreased by 1.1 percent between 2010 and 2014, while biocapacity per person decreased by 2.4
+                        percent over the same time period. In other words, although our individual share of the world’s biocapacity is decreasing, we are
+                        also reducing our individual demand on nature.
+                        </br>
+                        </br>
+                        The <strong>carbon footprint</strong> is the fastest growing Footprint component; in 2014, it comprised 60 percent of the world’s
+                        total Ecological Footprint. This is a significant increase from the carbon Footprint in 1961, which contributed to 44 percent of
+                        the world’s Ecological Footprint, or 150 years ago, when it was less than one percent of what it is today.
+                        <strong>Cropland footprint</strong> was the next largest contributor to the world’s Ecological Footprint in 2014, at 19.4 percent, followed by
+                        <strong>forest-product</strong> (9.8 percent), <strong>grazing-land</strong> (5.1 percent), <strong>fishing-ground</strong> (3.3 percent),
+                        and <strong>built-up-land</strong> (2.3 percent).
+                    </p>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/footprint_global_trends.svg')}}"
+                        alt=""/>
+            </div>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/eco_deficit_reserve.svg')}}"
+                        alt=""/>
+                <div>
+                    <p>
+                        Across <strong>individual countries</strong>, results show that most countries run a biocapacity deficit,
+                        where they have larger Ecological Footprints than biocapacity. Countries that continue to have biocapacity
+                        reserves (where the biocapacity within a country’s borders is greater than the Ecological Footprint
+                        of that country) tend to be located in forested regions, such as the tropics and boreal latitudes.
+                    </p>
+                </div>
+            </div>
+
+            <!--Text-Image-->
+            <div class="text_image_css">
+                <div>
+                    <p>
+                        National progress towards sustainable development can be assessed by comparing the NFA results to the United Nations'
+                        <strong>Human Development Index (HDI)</strong>, which aggregates education, longevity, and income into a single metric.
+                        </br>
+                        </br>
+                        The United Nations Development Program (UNDP) defines an <strong>HDI score of 0.7 as the threshold for high development</strong>.
+                        The <strong>biocapacity available on the planet is calculated as 1.7 gha per person</strong>. Combining these two thresholds gives
+                        clear minimum conditions for globally sustainable human development. Countries in the light-blue section of the lower right-hand
+                        box exhibit high levels of development with globally replicable resource demand.
+                        As of 2014, only two countries fit these criteria: Sri Lanka and the Dominican Republic. On average, the world is moving closer
+                        to the Global Sustainable Development Quadrant: HDI has increased consistently since the metric was developed in 1990, from 0.55 in
+                        1990 to 0.69 in 2014 (weighted by the population of each country). In addition, the world’s Ecological Footprint per person decreased from
+                        slightly from 2013 to 2014. However, the current world Ecological Footprint of 2.8 gha per person remains far above the 1.7 gha of
+                        biocapacity available to each person.
+                    </p>
+                </div>
+                <img
+                src="{{url_for('static', filename='figures/se/ch2/HDI_FP.svg')}}"
+                        alt=""/>
+            </div>
+
+
+            <h5>Questions:</h5>
+            <div class="questions_css">
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q7.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 7</legend>
+                            <p class="card-text">The ecological overshoot is defined as the difference between the biocapacity
+                                and the ecological footprint. When does it begin the ecological overshoot in the western economies?
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q7.type.errors %}
+                                    {{ form_m2_ch2_q7.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q7.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q7.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q7.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+                <div class="question">
+                    <form method="POST" action="">
+                        {{ form_m2_ch2_q8.csrf_token }}
+                            <legend class="border-bottom mb-4">Question 8</legend>
+                            <p class="card-text">In 2014, which percentage of the ecological footprint does represent the carbon footprint?
+                                <strong>(chose one of the next options):</strong>
+
+
+                            </p>
+                            <div class="form-group">
+                                {% if form_m2_ch2_q8.type.errors %}
+                                    {{ form_m2_ch2_q8.type(class="form-control form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form_m2_ch2_q8.type.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form_m2_ch2_q8.type(class="form-control form-control") }}
+                                {% endif %}
+                            </div>
+                            </br>
+                            <div class="form-group border-bottom pb-3">
+                                {{ form_m2_ch2_q8.submit(class="btn btn-outline-info")}}
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock content %}

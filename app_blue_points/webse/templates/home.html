@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Showcase -->
+    <section class="home_section_css">
+
+
+      <div class="container">
+          <div class="header">
+                <div class="box">
+                    <h1 class="text-center"><span class="text-warning"> Sustainable Energy </span> and <span class="text-warning"> App Development </span></h1>
+                    <p class="lead my-4">
+                    This course focuses on the study of sustainable energy and its relation with the Sustainable Development Goals.
+                    </p>
+                    <p class="lead my-4">
+                      By using some basic Flask, Python, CSS and HTML code, we develop a transport carbon emissions calculator app, and we study possible policies to reduce those emissions.
+                    </p>
+                    <div class="container_buttons_links_header">
+                       <div class="btn">
+                           <a href="{{ url_for('users.register') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Register</a>
+                       </div>
+                       <div class="btn">
+                           <a href="{{ url_for('users.login') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Login</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="box">
+                        <div class="h1 mb-3">
+                            <i class="bi bi-bell"></i>
+                        </div>
+                        <h3 class="text-center"><span class="text-warning"> Announcements: </span>
+                        </h3>
+                        {% for announcement in announcements.items %}
+                            <article class="media content-section">
+                              <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + announcement.author.image_file) }}">
+                              <div class="media-body">
+                                <div class="article-metadata">
+                                  <a class="mr-2" href="{{ url_for('users.user_announcements', username=announcement.author.username) }}">{{ announcement.author.username }}</a>
+                                  <small class="text-muted">{{ announcement.date_posted.strftime('%Y-%m-%d') }}</small>
+                                </div>
+                                <h4><a class="article-title" href="{{ url_for('announcements.announcement', announcement_id=announcement.id) }}">{{ announcement.title }}</a></h4>
+                                <p class="text-muted">{{ announcement.content }}</p>
+                              </div>
+                            </article>
+                        {% endfor %}
+                        {% for page_num in announcements.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                          {% if page_num %}
+                            {% if announcements.page == page_num %}
+                              <a class="btn btn-info mb-4" href="{{ url_for('home.home_main', page=page_num) }}">{{ page_num }}</a>
+                            {% else %}
+                              <a class="btn btn-outline-info mb-4" href="{{ url_for('home.home_main', page=page_num) }}">{{ page_num }}</a>
+                            {% endif %}
+                          {% else %}
+                            ...
+                          {% endif %}
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="text-light p-5", style="background-color:#6c757d;">
+      <div class="container">
+          <h3 class="text-center">Newsletter</h3>
+            <p class="text-center">
+              During the course, the students write a newsletter to disseminate their research and the app developed during the course.
+            </p>
+            <div class="container_buttons_links_newsletter">
+               <div class="btn">
+                   <a href=https://energyio.org/newsletter.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Newsletter</a>
+               </div>
+            </div>
+
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                App Development Module
+                            </h3>
+                            <p class="card-text">
+                                In this part of the course, we develop a carbon emission calculator by using Flask, Python, HTML and CSS
+                            </p>
+                            <div class="container_buttons_links_header">
+                               <div class="btn">
+                                   <a href="{{ url_for('app_module.app_web') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">App Web</a>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Sustainable Energy Module
+                            </h3>
+                            <p class="card-text">
+                                In this part of the course we cover the most salient topics in sustainable energy, and we connect those topics
+                                with the Sustainable Development Goals
+                            </p>
+                            <div class="container_buttons_links_newsletter">
+                               <div class="btn">
+                                   <a href="{{ url_for('se_module.sustainable_energy_web') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Sustainable Energy Web</a>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+              >
+                Assignment and final grades.
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+              <p>The assignment of the course consists on two parts.
+              <br>
+              <br>
+              First, the students have to write an essay of 5 pages with the methodology
+              used to work out the transport carbon emissions. This part of the course counts for the 30% of the final grade.
+              <br>
+              <br>
+              Second, the students have to write an essay of 20 pages on a topic that they choose related to the content of
+              the course. The students also have to present this research in the conference organized at the end of the course.
+              This part of the course counts for the 70% of the final grade. This part of the course will be evaluated by me, and
+              Elisa Trujillo from University of Lleida.
+              <br>
+              <br>
+              The app developed by the students does not account for the final grade.
+              <br>
+              <br>
+              The students have to write a one page summary of their final essay to be published in the newsletter of the course, but
+              that part does not account for the final grade.
+              </p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+              >
+                Groups.
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+              <p>The development of the app is conducted in random groups of six persons. In the future the students will need to
+              work with persons from different background, and this part of the course helps them to make that transition smoothly.
+              <br>
+              <br>
+              The essay in the topic chosen by the students is conducted in groups of six persons. These groups can be formed
+              by the students as they want. I suggest the students to form balanced groups by gender, nationality.
+              </p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+              >
+                Key dates and final exam.
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+              <p>The 5 pages essay with the methodology used to work out carbon emissions have to be delivered by March 21.
+              <br>
+              <br>
+              On April 04, we organize the midway conference where the students present their 20 pages essay. This helps the students to train for the final conference, and to
+              know the points that have to be fine-tuned in their research.
+              <br>
+              <br>
+              The 20 pages essay has to be delivered by April 15, and the final conference will take place on April 22.
+              </p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+              >
+                Lectures.
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+              <p>The first hour of the lectures on Monday will be allocated to build students' app. During the first fifteen minutes, we conduct the
+              Mondays Challenge Breakfast, where one of the groups will present the development of the app the previous week plus some small change on their app. During the
+              second part of the lecture, we add some more lines of code ot our app. We conclude each lecture by pushing our app to the server, and the students
+              can see from the first day the progress in their work.
+              <br>
+              <br>
+              The code for each lecture will be available in a Github account, so the students can have access to that code and they will be sure that their app run
+              at the end of each lecture. By doing that, the students will focus on the process, and will not be stressed if they miss some part of the code.
+              <br>
+              <br>
+              The second part of the lecture on Monday, and the lectures on Wednesdays will be allocated to study the sustainable energy module of the course.
+              That part of the course consists on debates, videos, presentations, and exercises. We complement those lectures with keynote speakers lectures.
+              <br>
+              <br>
+              All the lectures will be streamed, recorded and posted on Canvas.
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+{% endblock content %}

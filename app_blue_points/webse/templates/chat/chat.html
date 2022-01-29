@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="section_display_chat_css">
+                <div class="box">
+                ..
+                </div>
+                <div class="box">
+                   <article class="media content-section">
+                    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + chat.author.image_file) }}">
+                    <div class="media-body">
+                      <div class="article-metadata">
+                        <a class="mr-2" href="{{ url_for('users.user_chats', username=chat.author.username) }}">{{ chat.author.username }}</a>
+                        <small class="text-muted">{{ chat.date_posted.strftime('%Y-%m-%d') }}</small>
+                        {% if chat.author == current_user %}
+                          <div>
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('chats.update_chat', chat_id=chat.id) }}">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{{ url_for('chats.delete_chat', chat_id=chat.id) }}">Delete</a>
+                          </div>
+                        {% endif %}
+                      </div>
+                      <h2 class="article-title">{{ chat.title }}</h2>
+                      <p class="text-muted">{{ chat.content }}</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="box">
+                ..
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+
+

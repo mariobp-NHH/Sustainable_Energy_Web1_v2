@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section id="introduction" class="bg-white p-5 p-lg-5 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+
+            <div class="section_query_chat_css">
+                <div class="box">
+
+                </div>
+                <div class="box">
+                    <h3 style="justify-content:center;">Introduction</h3>
+                    <p>In this section, we discuss about the concepts "green economy", "sustainable energy" and "sustainable development".
+                    To motivate that debate, we use a questionnaire and a chat.
+                    </p>
+                    <div class="container_buttons_links_section_query_chat">
+                       <div class="btn">
+                           <a href="{{ url_for('se_module.se_web_ch1_ex2_questionnaire') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Questionnaire</a>
+                       </div>
+                       <div class="btn">
+                           <a href="{{ url_for('se_module.se_web_ch1_ex2_chat') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chat</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="box">
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+{% endblock content %}

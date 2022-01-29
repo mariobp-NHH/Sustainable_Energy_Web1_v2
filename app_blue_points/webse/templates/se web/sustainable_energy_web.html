@@ -1,0 +1,310 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Introduction -->
+    <section id="sustainable_energy_web_ch1" class="text-light p-5 p-lg-5 pt-lg-5 text-center text-sm-start", style="background-color:#343a40;">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+              <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                <h1> <span class="text-warning"> Sustainable Energy Module </span></h1>
+                <p class="mb-1">
+                  During the last century, human activity has reshaped the world from an economic and environmental perspective
+                    introducing challenges for sustainability. In this part of the course, we study those challenges,
+                    and we provide some technological and political solutions to mitigate climate change.
+                </p>
+                </br>
+                <div class="container_buttons_links_header">
+                   <div class="btn">
+                       <a href="https://energyio.org/manual.pdf" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Manual Course 2022</a>
+                   </div>
+                </div>
+                </br>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">The <strong>first block</strong> covers chapters 1, 2 and 3, where we <strong>frame</strong>
+                      the discussion by introducing the concepts of green economy, sustainable energy and sustainable development.
+                      We also introduce the <strong>metrics</strong> that help us to measure sustainable energy and sustainable development.</li>
+                  <li class="list-group-item">The <strong>second block</strong> covers chapters 4, 5, 6,
+                      7, 8, 9 and 10. In that block, we study how the technological
+                      changes can contribute to develop a <strong>sustainable energy</strong> system.</li>
+                  <li class="list-group-item">The <strong>third block</strong> covers chapters  11, 12 and 13.
+                      In that block, we study how the technological changes studied in the second block can help to achieve the Sustainable Development
+                      Goals defined by the United Nations Development Program.</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-5 col-12">
+                  <img class="img-fluid w-100 rounded mx-auto d-block"
+                    src="{{url_for('static', filename='figures/wind_turbine.svg')}}"
+                    alt=""/>
+              </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Chapters. First row-->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <!-- Box 1.1. Ch 1 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 1
+                            </h3>
+                            <p class="card-text">
+                                This chapter frames the content of the course by discussing key concepts as green economy, sustainable energy and sustainable development.
+                            </p>
+                            <a href="{{ url_for('se_module.se_web_ch1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 1 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 1.2. Ch 2 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 2
+                            </h3>
+                            <p class="card-text">
+                                This chapter defines the concept of ecological footprint and studies the methodology to measure it.
+                                </br>
+                                </br>
+                                </br>
+                            </p>
+                            <a href="{{ url_for('se_module.se_web_ch2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 2 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 1.3. Ch 3 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 3
+                            </h3>
+                            <p class="card-text">
+                                This chapter connects the ecological footprint and the human development index, and studies the proposed changes in the methodology to connect both concepts.
+                            </p>
+                            <a href="{{ url_for('se_module.se_web_ch3') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 3 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 1.4. Ch 4 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 4
+                            </h3>
+                            <p class="card-text">
+                                This chapter analyzes the main transformations in the technologies within the sustainable energy sector in the road map to 2050 to mitigate climate change.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 4 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 1.5. Ch 5 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 5
+                            </h3>
+                            <p class="card-text">
+                                This chapter studies the main features of wind energy and technology, and its development by type of technology and location.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">chapter 5 Web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Chapters. Second row -->
+    <section class="p-5">
+            <div class="container">
+            <div class="row text-center g-4">
+                <!-- Box 2.1. Ch 6 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 6
+                            </h3>
+                            <p class="card-text">
+                                This chapter studies the main features of solar energy and solar panels, and the future development of this technology.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="/app_web" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 6 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2.2. Chapter 7 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 7
+                            </h3>
+                            <p class="card-text">
+                                This chapters analyzes the main challenges in the technological development of hydrogen, and its role in the future energy system.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 7 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2.3. Ch 8 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 8
+                            </h3>
+                            <p class="card-text">
+                            This chapter analyzes the role of bioenergy in the industry sector, the transport sector, the building sector and the power sector.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 8 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2.4. Chapter 9 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 9
+                            </h3>
+                            <p class="card-text">
+                                This chapter studies the different types of batteries and its relation with electric vehicles and the electric system.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 9 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2.5. Chapter 10 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 10
+                            </h3>
+                            <p class="card-text">
+                                This chapter studies the main characteristics of carbon capture storage technologies, and its potentiality to decarbonize the economic system.
+                                </br>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 10 Web</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Chapters. Thirdrow-->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <!-- Box 3.1. Ch 11 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 11
+                            </h3>
+                            <p class="card-text">
+                                This chapter focuses on the SDG 7: Energy, paying special attention to access to electricity, renewable energy and energy efficiency.
+                                </br>
+                                </br>
+                            </p>
+                            <a href="{{ url_for('se_module.se_web_ch1') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 11 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 3.2. Ch 12 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#6c757d;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 12
+                            </h3>
+                            <p class="card-text">
+                                This chapter studies the relation between SDG 5: Gender Equality; SDG 7: Affordable and Clean Energy; and SDG 8: Decent Work and Economic Growth.
+                            </p>
+                            <a href="{{ url_for('se_module.se_web_ch2') }}" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 12 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 3.3. Ch 13 -->
+                <div class="col-md">
+                    <div class="card text-light", style="background-color:#343a40;">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brightness-alt-high"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Chapter 13
+                            </h3>
+                            <p class="card-text">
+                                This chapters studies the key role that cities can play mitigating climate change by introducing innovative transport, recycling and building policies.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color=#007bff;">Chapter 13 Web</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 3.4. Ch 14 -->
+                <div class="col-md">
+
+                </div>
+                <!-- Box 3.5. Ch 15 -->
+                <div class="col-md">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
